@@ -1,7 +1,30 @@
-.header {
-    background: #000;
+header {
+    background-color: #000;
+    color: #fff;
 }
 
+.navbar {
+    font-family: 'Lato', sans-serif;
+}
 .navbar a {
+    padding-left: 30px;
     color: #fff;
+}
+.navbar li {
+    padding-right: 30px;
+    color: #fff;
+    position: relative;
+    top: -30px;
+}
+.navbar li a{
+    padding: 5px 20px !important;
+}
+
+.navbar li a:hover {
+    border: solid 1px #fff;
+    border-radius: 20px;
+}
+
+.navlink .active {
+    border-top: solid 5px #ed1d23 !important;
 }

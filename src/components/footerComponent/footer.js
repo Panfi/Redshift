@@ -11,7 +11,7 @@ function Footer() {
                     <Col md="5">
                         <h1>Get in touch</h1>
                         <p>We're here to help answer your questions. We take great pride in using our expertise for you and look forward to hearing from</p>
-                        <Button color="danger">Call Us</Button>
+                        <a href="" className="btn btn-default">Call Us</a>
                     </Col>
                     <Col className="subtitle" md="3">
                         <h3>Subtitle</h3>

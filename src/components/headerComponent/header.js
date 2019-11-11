@@ -1,9 +1,11 @@
 import React from 'react';
+import logo from '../../assets/images/logo.png';
 import './header.css';
 import {
     Container,
     Collapse,
     Col,
+    Row,
     Navbar,
     NavbarToggler,
     NavbarBrand,
@@ -15,10 +17,11 @@ import {
 
 function Header() {
     return (
-        <Container fluid>
+        <header>
+            <Container fluid className="header">
             <Navbar color="black" black expand="md">
                 <Container>
-                    <NavbarBrand href="/">Redshift</NavbarBrand>
+                    <NavbarBrand href="/"><img src={logo} width="250" alt="" /></NavbarBrand>
                     <NavbarToggler />
                     <Collapse navbar>
                     <Nav className="ml-auto" navbar>
@@ -39,14 +42,7 @@ function Header() {
                 </Container>
             </Navbar>
         </Container>
-        <Container fluid>
-            <Col md="8">
-            
-            </Col>
-            <Col md="4">
-            
-            </Col>
-        </Container>
+        </header>
         
     );
 }
