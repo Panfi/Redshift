@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import './home.css';
+import Block1 from '../../../assets/images/Redshift_Icon_40-8@2x.png';
+import Block2 from '../../../assets/images/Redshift_Icon_3-8@2x.png';
+import Block3 from '../../../assets/images/Redshift_Isometric_Icons_34.png';
+import Block4 from '../../../assets/images/Redshift_Isometric_Icons_35.png';
+import Block5 from '../../../assets/images/Redshift_Icon_36_1-8@2x.png';
+import Block6 from '../../../assets/images/Redshift_Icon_34-8@2x.png';
+import Block7 from '../../../assets/images/Redshift_Icon_39-8.png';
+import Block8 from '../../../assets/images/Redshift_Icon_36-8.png';
 import {
     Container,
     Col,
-    Row,
-    Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
-    CarouselCaption
+    Row
 
 } from 'reactstrap';
 
@@ -79,7 +82,64 @@ function Home() {
             <Container fluid>
                 <Row>
                     <div className="bg-service">
-
+                        <div className="text-center" style={{ color: "white", paddingTop: "100px", paddingBottom: "100px"}}>
+                            <h3 style={{ color: "white", textTransform: "uppercase", fontWeight:"bolder"}}>Speciality Services</h3>
+                            <h4 style={{ color: "white", fontWeight:"bolder"}}>We're here to help.</h4>
+                        </div>
+                        <Container>
+                            <Row>
+                                <Col md="6" style={{ color: "white", paddingTop: "100px"}}>
+                                    <img src={Block1} width="300" alt="" />
+                                    <h5 style={{ textTransform:"uppercase", color:"white", fontWeight:"bold"}}>Penetration testing</h5> 
+                                    <p style={{ color: "#C3C3C3"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>Quisque ut tellus purus. In elementum, mi vitae finibus ultricies,<br/> enim mauris pulvinar velit, sed fermentum lorem nisl a ligula</p>
+                                </Col>
+                                <Col md="6" style={{ color: "white", paddingTop: "100px"}}>
+                                    <img src={Block2} width="300" alt="" />
+                                    <h5 style={{ textTransform:"uppercase", color:"white", fontWeight:"bold"}}>Red Team</h5> 
+                                    <p style={{ color: "#C3C3C3"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>Quisque ut tellus purus. In elementum, mi vitae finibus ultricies,<br/> enim mauris pulvinar velit, sed fermentum lorem nisl a ligula</p>
+                                </Col>
+                            </Row>
+                            <div className="text-center" style={{ color: "white", paddingTop: "100px"}}>
+                                <h3 style={{ color: "white", textTransform: "uppercase", fontWeight:"bolder"}}>Additional Services</h3>
+                            </div>
+                            <Row>
+                            <Col md="6" style={{ color: "white", paddingTop: "100px"}}>
+                                    <img src={Block3} width="300" alt="" />
+                                    <h5 style={{ textTransform:"uppercase", color:"white", fontWeight:"bold"}}>Phishing & social engineering</h5> 
+                                    <p style={{ color: "#C3C3C3"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>Quisque ut tellus purus. In elementum, mi vitae finibus ultricies,<br/> enim mauris pulvinar velit, sed fermentum lorem nisl a ligula</p>
+                                </Col>
+                                <Col md="6" style={{ color: "white", paddingTop: "100px"}}>
+                                    <img src={Block4} width="300" alt="" />
+                                    <h5 style={{ textTransform:"uppercase", color:"white", fontWeight:"bold"}}>Password auditing</h5> 
+                                    <p style={{ color: "#C3C3C3"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>Quisque ut tellus purus. In elementum, mi vitae finibus ultricies,<br/> enim mauris pulvinar velit, sed fermentum lorem nisl a ligula</p>
+                                </Col>
+                            </Row>
+                            <Row>
+                            <Col md="6" style={{ color: "white", paddingTop: "100px"}}>
+                                    <img src={Block5} width="300" alt="" />
+                                    <h5 style={{ textTransform:"uppercase", color:"white", fontWeight:"bold"}}>Threat Modelling</h5> 
+                                    <p style={{ color: "#C3C3C3"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>Quisque ut tellus purus. In elementum, mi vitae finibus ultricies,<br/> enim mauris pulvinar velit, sed fermentum lorem nisl a ligula</p>
+                                </Col>
+                                <Col md="6" style={{ color: "white", paddingTop: "100px"}}>
+                                    <img src={Block6} width="300" alt="" />
+                                    <h5 style={{ textTransform:"uppercase", color:"white", fontWeight:"bold"}}>Cyber security strategy consulting</h5> 
+                                    <p style={{ color: "#C3C3C3"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>Quisque ut tellus purus. In elementum, mi vitae finibus ultricies,<br/> enim mauris pulvinar velit, sed fermentum lorem nisl a ligula</p>
+                                </Col>
+                            </Row>
+                            <Row>
+                            <Col md="6" style={{ color: "white", paddingTop: "100px"}}>
+                                    <img src={Block7} width="300" alt="" />
+                                    <h5 style={{ textTransform:"uppercase", color:"white", fontWeight:"bold"}}>Incident response</h5> 
+                                    <p style={{ color: "#C3C3C3"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>Quisque ut tellus purus. In elementum, mi vitae finibus ultricies,<br/> enim mauris pulvinar velit, sed fermentum lorem nisl a ligula</p>
+                                </Col>
+                                <Col md="6" style={{ color: "white", paddingTop: "100px"}}>
+                                    <img src={Block8} width="300" alt="" />
+                                    <h5 style={{ textTransform:"uppercase", color:"white", fontWeight:"bold"}}>security research and development</h5> 
+                                    <p style={{ color: "#C3C3C3"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>Quisque ut tellus purus. In elementum, mi vitae finibus ultricies,<br/> enim mauris pulvinar velit, sed fermentum lorem nisl a ligula</p>
+                                </Col>
+                            </Row>
+                            <div style={{ paddingTop: "100px", paddingBottom: "100px"}}></div>
+                        </Container>
                     </div>
                 </Row>
             </Container>
@@ -90,7 +150,13 @@ function Home() {
             </Container>
             <Container fluid>
                 <Row>
-                    
+                    <Col md="12">
+                        <div className="bg-testimony text-center">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>Quisque ut tellus purus. In elementum, <br/>mi vitae finibus ultricies, enim mauris <br/>pulvinar velit, sed fermentum lorem nisl a ligula.<br/>
+                                <small>Patric Malvoy <br/>CEO of ThunderSafe</small>
+                            </p>
+                        </div>
+                    </Col>
                 </Row>
             </Container>
             

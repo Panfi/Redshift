@@ -1,5 +1,6 @@
 footer {
-    background: #000;
+    background: #000 url('../../assets/images/bg_footer.png') no-repeat;
+    background-size: cover;
     color: #fff;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -11,11 +12,14 @@ footer a {
 
 footer h1 {
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 900;
+    font-size: 1.2rem;
 }
 
 footer h3 {
     text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 footer a.btn-default {
