@@ -7,11 +7,11 @@ function Footer() {
         <footer className="text-left">
             <Container className="mt-5">
                 <Row>
-                    <Col md="1"></Col>
-                    <Col md="5">
+                    <Col md="1" className="pattern-left"></Col>
+                    <Col md="4">
                         <h1>Get in touch</h1>
                         <p>We're here to help answer your questions. We take great pride in using our expertise for you and look forward to hearing from</p>
-                        <a href="" className="btn btn-default">Call Us</a>
+                        <a href="" className="btn btn-default">Contact Us</a>
                     </Col>
                     <Col className="subtitle" md="3">
                         <h3>Subtitle</h3>
@@ -31,6 +31,7 @@ function Footer() {
                         <p className="mt-5">Call Center <br/>+27 (0) 78 020 6154</p>
 
                     </Col>
+                    <Col md="1" className="pattern-right"></Col>
                 </Row>
             </Container>
             <Container fluid className="text-center mt-5 text-copy">
