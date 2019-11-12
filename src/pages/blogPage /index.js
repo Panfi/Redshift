@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from "../../components/headerComponent";
 import BlogCard from './blogCard';
 import { Container, Row, Col } from 'reactstrap'
+import Button from '../../components/button';
 
 
 
@@ -20,7 +21,7 @@ export default class BlogPage extends Component {
         return (
           <div>
             <Container style={{ margin: "auto" }}>
-              <Row style={{ margin: "auto" }}>
+              <Row style={{ margin: "auto", paddingTop:80, paddingBottom:60 }}>
                 <Col md={4} style={{ margin: "auto" }}>
                   <BlogCard image={image} />
                 </Col>
@@ -49,7 +50,9 @@ export default class BlogPage extends Component {
                   <BlogCard image={image} />
                 </Col>
               </Row>
-              <button/>
+              <div style={{marginLeft:15, marginBottom:20}}>
+                <Button title="View Order" type="btn-primary" />
+              </div>
             </Container>
           </div>
         );
