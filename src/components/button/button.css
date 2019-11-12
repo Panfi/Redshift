@@ -1,0 +1,31 @@
+.btn {
+  padding: 10px 35px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-default {
+  background: transparent !important;
+  color: #fff !important;
+  border: solid 2px #fff !important;
+}
+
+.btn-default:hover {
+  background: #ed1d23 !important;
+  color: #fff !important;
+  border: solid 2px #ed1d23 !important;
+}
+
+.btn-primary {
+  background: #ed1d23 !important;
+  color: #fff !important;
+  border: solid 2px #ed1d23 !important;
+}
+
+.btn-primary:hover {
+  background: transparent !important;
+  color: #ed1d23 !important;
+  border: solid 2px #ed1d23 !important;
+}
