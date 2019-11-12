@@ -11,15 +11,15 @@ function Footer() {
                     <Col md="5">
                         <h1>Get in touch</h1>
                         <p>We're here to help answer your questions. We take great pride in using our expertise for you and look forward to hearing from</p>
-                        <a href="" className="btn btn-default">Call Us</a>
+                        <a href="!#" className="btn btn-default">Call Us</a>
                     </Col>
                     <Col className="subtitle" md="3">
                         <h3>Subtitle</h3>
-                        <a href="">Orci firngilla ultricies</a><br/>
-                        <a href="">Mollis libero auctor</a><br/>
-                        <a href="">Viverra nulla</a><br/>
-                        <a href="">Imperdiet sit</a><br/>
-                        <a href="">Orci firngilla ultricies</a>
+                        <a href="!#">Orci firngilla ultricies</a><br/>
+                        <a href="!#">Mollis libero auctor</a><br/>
+                        <a href="!#">Viverra nulla</a><br/>
+                        <a href="!#">Imperdiet sit</a><br/>
+                        <a href="!#">Orci firngilla ultricies</a>
                     </Col>
                     <Col md="3">
                         <h3>Subscribe</h3>
