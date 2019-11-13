@@ -19,7 +19,7 @@ function Home() {
             <Col md="6"></Col>
             <Col md="6">
               <div className="ml-5">
-                <h1>
+                <h1 style={{ textTransform:"uppercase"}}>
                   Build resilience <br />
                   against modern <br />
                   cyber attacks
@@ -52,7 +52,7 @@ function Home() {
               <h3>Your cyber security journey</h3>
             </Col>
             <Col md="6">
-              <p className="mb-5">
+              <p className="mb-5" style={{ marginTop:"70px"}}>
                 Lorem ipsum dolor sit amet, <br />
                 consectetur adipiscing elit. <br />
                 Quisque ut tellus purus.
@@ -69,7 +69,7 @@ function Home() {
       </Container>
       <Container className="mt-5">
         <div className="approach">
-          <h3 className="text-center">Our three-step cyber approach</h3>
+          <h3 className="text-center" style={{ paddingTop:"70px"}}>Our three-step cyber approach</h3>
           <Row>
             <Col md="4">
               <h1>01</h1>
