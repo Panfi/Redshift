@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Form, FormGroup, Input, FormText, } from 'reactstrap';
 import Button from '../../components/button';
-import googleMap from '../../assets/images/map.png'
+import googleMap from '../../assets/images/map.jpg'
 import "./contact.css";
 
 export default class ContactPage extends Component {
