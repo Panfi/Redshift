@@ -3,15 +3,15 @@ import { Container, Row,Col } from 'reactstrap';
 import { isMobile } from 'react-device-detect';
 import bg from "../../../assets/images/Redshift_Web_Header-03.png";
 
-export default function BlogHeader() {
+export default function contactHeader() {
     return (
         <div
             style={{
                 backgroundImage: `url(${bg})`,
-                backgroundSize:"cover",
+                backgroundSize: isMobile ? "cover" : "cover",
                 height: "100vh",
                 backgroundRepeat: "no-repeat",
-                backgroundPositionX:'center'
+                backgroundPositionX: 'center'
             }}
         >
             <Container fluid >
