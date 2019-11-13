@@ -36,17 +36,16 @@ function Header(props) {
     console.log(props)
     return (
       <header>
-        <Container fluid className="header">
-          <Navbar color="black"  expand="md">
+        <Container fluid className="header" style={{position:'fixed', zIndex:9999}}>
+          <Navbar color="black" expand="md">
             <Container>
               <NavbarBrand href="/">
-                <img src={logo} width="250" alt="" />
+                <img src={logo} style={{width:250}} alt="" />
               </NavbarBrand>
               <NavbarToggler />
               <Collapse navbar>
                 <Nav className="ml-auto" navbar>
-                                {Links.map((data, i) => {
-                      
+                  {Links.map((data, i) => {
                       return (
                         <NavItem key={i}>
                           {data.link === props.location.pathname && (
@@ -65,7 +64,7 @@ function Header(props) {
                           )}
                           <Link
                             to={data.link}
-                            style={{ textDecoration: "none" }}
+                            style={{ textDecoration: "none", color:'#888',  }}
                           >
                             {data.name}
                           </Link>
