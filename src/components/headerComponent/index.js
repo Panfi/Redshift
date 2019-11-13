@@ -63,12 +63,18 @@ function Header(props) {
                               }}
                             />
                           )}
-                          <Link
+                          {data.name === "Service" ? (
+                            <div>
+                                {data.name}
+                            </div>
+                          ) : (
+                            <Link
                             to={data.link}
                             style={{ textDecoration: "none" }}
                           >
                             {data.name}
                           </Link>
+                          )} 
                         </NavItem>
                       );
                   })}
