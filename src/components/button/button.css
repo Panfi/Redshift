@@ -31,3 +31,9 @@
   color: #ed1d23 !important;
   border: solid 2px #ed1d23 !important;
 }
+
+.btn-secondary {
+  background: #ed1d23 !important;
+  color: #fff !important;
+  border: solid 2px #ed1d23 !important;
+}

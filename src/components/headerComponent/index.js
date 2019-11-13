@@ -79,31 +79,38 @@ class Header extends Component {
               <NavbarToggler />
               <Collapse navbar>
                 <Nav className="ml-auto" navbar>
-                  {Links.map((data, i) => {
-                    return (
-                      <NavItem key={i}>
-                        {data.link === location.pathname && (
-                          <div
-                            style={{
-                              height: 10,
-                              width: 50,
-                              backgroundColor: "#ED1D23",
-                              position: "absolute",
-                              top: -35,
-                              left: "50%",
-                              marginLeft: -40,
-                              transition: "0.5s"
-                            }}
-                          />
-                        )}
-                        <Link
-                          to={data.link}
-                          style={{ textDecoration: "none", color: '#888', }}
-                        >
-                          {data.name}
-                        </Link>
-                      </NavItem>
-                    );
+                                {Links.map((data, i) => {
+                      
+                      return (
+                        <NavItem key={i}>
+                          {data.link === location.pathname && (
+                            <div
+                              style={{
+                                height: 10,
+                                width: 50,
+                                backgroundColor: "#ED1D23",
+                                position: "absolute",
+                                top: -35,
+                                left: "50%",
+                                marginLeft: -40,
+                                transition: "0.5s"
+                              }}
+                            />
+                          )}
+                          {data.name === "Service" ? (
+                            <div>
+                                {data.name}
+                            </div>
+                          ) : (
+                            <Link
+                            to={data.link}
+                            style={{ textDecoration: "none" }}
+                          >
+                            {data.name}
+                          </Link>
+                          )} 
+                        </NavItem>
+                      );
                   })}
                 </Nav>
               </Collapse>
