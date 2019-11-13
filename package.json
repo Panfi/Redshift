@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "assets": "file:src/assets",
+    "google-map-react": "^1.1.5",
     "pages": "file:src/pages",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",

@@ -1,0 +1,29 @@
+.bg-career {
+    background: #000 url('../../assets/images/bg-career.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    color: #fff;
+    min-height: 220px;
+    margin-bottom: 40px;
+}
+.bg-career h1 {
+    padding-top: 70px;
+}
+
+.bg-contact h3::before {
+    content: "";
+    display: block;
+    width: 30px;
+    border: solid 2px red;
+    position: relative;
+    top: -10px;
+}
+
+input#name,
+input#email,
+select#business,
+textarea#message {
+    border: none !important;
+    background: #c3c3c3;
+    box-shadow: none !important;
+}
