@@ -1,0 +1,104 @@
+.home {
+  background: #000;
+  padding-top: 30px !important;
+  color: #fff !important;
+}
+
+.home h3 {
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-top: 70px;
+}
+
+.home a.btn-default {
+  background: transparent !important;
+  color: #fff !important;
+  padding: 10px 35px;
+  border: solid 2px !important;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.home a.btn-default:hover {
+  background: #ed1d23 !important;
+  color: #fff !important;
+  padding: 10px 35px;
+  border: none !important;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.approach h3 {
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.approach h1::before {
+  content: ".";
+  display: block;
+  background: url("../../assets/images/red_block.png") no-repeat;
+  position: relative;
+  top: 85px !important;
+  left: -10px;
+  z-index: -99;
+  width: 200px;
+  color: transparent !important;
+}
+
+.approach h1 {
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-top: 60px;
+}
+
+.approach h2 {
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 60px;
+}
+
+.approach h2:before {
+  content: "";
+  display: block;
+  border: solid 2px #ed1d23;
+  width: 30px;
+  position: relative;
+  left: 0;
+  top: -5px;
+}
+
+.canyon {
+  background: url("../../assets/images/canyon.png") no-repeat;
+  background-size: cover;
+  min-height: 220px;
+  margin: 100px 0px 40px;
+  width: 100% !important;
+}
+
+.bg-service {
+  background: #000 url("../../assets/images/bg_service.jpg") no-repeat;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-left: 100px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.canyon2 {
+  background: url("../../assets/images/canyon.png") no-repeat;
+  background-size: cover;
+  min-height: 220px;
+  margin: 100px 0px 40px;
+  width: 100% !important;
+}
