@@ -9,6 +9,7 @@ import Block6 from "../../assets/images/Redshift_Icon_34-8@2x.png";
 import Block7 from "../../assets/images/Redshift_Icon_39-8.png";
 import Block8 from "../../assets/images/Redshift_Icon_36-8.png";
 import { Container, Col, Row } from "reactstrap";
+import Button from '../../components/button';
 
 function Home() {
   return (
@@ -31,9 +32,10 @@ function Home() {
                   and track <br />
                   them to remediation.
                 </p>
-                <a href="#" className="btn btn-default mt-3">
+                <Button type="btn-default" title="Learn More" />
+                {/* <a href="#" className="btn btn-default mt-3">
                   Learn More
-                </a>
+                </a> */}
               </div>
             </Col>
             <Col md="12">
@@ -314,7 +316,7 @@ function Home() {
                 </Col>
               </Row>
               <div
-                style={{ paddingTop: "100px", paddingBottom: "100px" }}
+                style={{ paddingTop: "100px", paddingBottom: "0px" }}
               ></div>
             </Container>
           </div>
