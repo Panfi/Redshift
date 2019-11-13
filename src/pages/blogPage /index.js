@@ -51,7 +51,7 @@ export default class BlogPage extends Component {
                 </Col>
               </Row>
               <div style={{marginLeft:15, marginBottom:20}}>
-                <Button title="View Order" type="btn-primary" />
+                <Button title="View Older" type="btn-primary" />
               </div>
             </Container>
           </div>
