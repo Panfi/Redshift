@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "assets": "file:src/assets",
     "pages": "file:src/pages",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",

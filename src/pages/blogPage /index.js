@@ -21,7 +21,7 @@ export default class BlogPage extends Component {
         return (
           <div>
             <Container style={{ margin: "auto" }}>
-              <Row style={{ margin: "auto", paddingTop:80, paddingBottom:60 }}>
+              <Row style={{ margin: "auto", paddingTop: 80 }}>
                 <Col md={4} style={{ margin: "auto" }}>
                   <BlogCard image={image} />
                 </Col>
@@ -53,7 +53,62 @@ export default class BlogPage extends Component {
               <div style={{marginLeft:15, marginBottom:20}}>
                 <Button title="View Older" type="btn-primary" />
               </div>
+              <section>
+                <Row>
+                  <Col>
+                    <h3 style={{ textAlign: "center", fontWeight: "bold" }}>
+                      POPULAR POSTS
+                    </h3>
+                  </Col>
+                </Row>
+                <Row style={{ margin: "auto", paddingTop: 10 }}>
+                  <Col md={8}>
+                    <Row>
+                      <Col md={6}>
+                        <BlogCard image={image3} />
+                      </Col>
+                      <Col md={6}>
+                        <BlogCard image={image4} />
+                      </Col>
+                      <Col md={6}>
+                        <BlogCard image={image5} />
+                      </Col>
+                      <Col md={6}>
+                        <BlogCard image={image2} />
+                      </Col>
+                      <Col md={6}>
+                        <BlogCard image={image3} />
+                      </Col>
+                      <Col md={6}>
+                        <BlogCard image={image4} />
+                      </Col>
+                      <Col md={6}>
+                        <BlogCard image={image} />
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <div
+                      style={{
+                        marginTop: 20,
+                        height: 760,
+                        width: 300,
+                        maxWidth: "100%",
+                        boxShadow: "0px 2px 3px 3px rgba(195,195,195, 0.4)"
+                      }}
+                    />
+                  </Col>
+                </Row>
+                <div style={{ marginLeft: 15, marginBottom: 30 }}>
+                  <Button title="See More" type="btn-primary" />
+                </div>
+              </section>
             </Container>
+            <div>
+              <Row>
+                <div class="canyon2"></div>
+              </Row>
+            </div>
           </div>
         );
     }
