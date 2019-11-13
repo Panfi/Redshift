@@ -98,13 +98,13 @@ class Header extends Component {
                             />
                           )}
                           {data.name === "Service" ? (
-                            <div>
+                            <div style={{ color: '#888' }}>
                                 {data.name}
                             </div>
                           ) : (
                             <Link
                             to={data.link}
-                            style={{ textDecoration: "none" }}
+                            style={{ textDecoration: "none", color:'#888' }}
                           >
                             {data.name}
                           </Link>
