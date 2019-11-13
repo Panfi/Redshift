@@ -50,8 +50,8 @@ export default class BlogPage extends Component {
                   <BlogCard image={image} />
                 </Col>
               </Row>
-              <div style={{ marginLeft: 15, marginBottom: 60 }}>
-                <Button title="View Order" type="btn-primary" />
+              <div style={{marginLeft:15, marginBottom:20}}>
+                <Button title="View Older" type="btn-primary" />
               </div>
               <section>
                 <Row>
