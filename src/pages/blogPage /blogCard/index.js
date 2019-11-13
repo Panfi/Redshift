@@ -5,6 +5,7 @@ import {
   CardBody,
 } from "reactstrap";
 import { icons } from "../../../assets";
+import { isMobile } from "react-device-detect";
 
 
 const BlogCard = ({ category, image,date, title, description }) => {
@@ -17,7 +18,7 @@ const BlogCard = ({ category, image,date, title, description }) => {
       <Card
         style={{
           width: "100%",
-          maxWidth: 300,
+          maxWidth:isMobile ? null : 300,
           boxShadow: "2px 2px 3px 0px rgba(195,195,195, 0.4)",
           cursor: "pointer"
         }}

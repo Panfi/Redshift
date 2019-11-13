@@ -4,8 +4,8 @@ import { Container, Row, Col } from 'reactstrap'
 import Button from '../../components/button';
 import BlogCategories from './blogCategories';
 import { isMobile } from 'react-device-detect';
+import BlogHeader from './blogHeader';
 
-import bg from "../../assets/images/Redshift_Web_Header-03.png";
 
 const image =
   "https://images.unsplash.com/photo-1502117859338-fd9daa518a9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEzMDA0fQ&auto=format&fit=crop&w=500&q=60";
@@ -24,55 +24,18 @@ export default class BlogPage extends Component {
     render() {
         return (
           <div>
-            <div
-              style={{
-                backgroundImage: `url(${bg})`,
-                backgroundSize: isMobile ? "cover" : "contain",
-                height: "100vh",
-                backgroundRepeat: "no-repeat"
-              }}
-            >
-              <Container fluid > 
-                <Row className="mx-auto">
-                  {!isMobile && <Col md={7}></Col>}
-                  <Col>
-                    <div
-                      style={{
-                        color: "#fff",
-                        paddingTop: "25vh",
-                        paddingBottom: "100vh",
-                      }}
-                    >
-                      <h1 style={{ marginBottom: 20, fontSize:isMobile? 45: 54 }}>
-                        Build Resilience
-                        <br />
-                        against modern
-                        <br />
-                        cyber attacks
-                      </h1>
-                      <p style={{ fontSize: isMobile ? 20: 24 }}>
-                        Gain powerful insight into your
-                        <br />
-                        security posture.
-                        <br />
-                        Redshift vulnerability assessments allow
-                        <br />
-                        you to identify risks and track
-                        <br />
-                        them to remediation.
-                      </p>
-                    </div>
-                  </Col>
-                </Row>
-              </Container>
-            </div>
+            <BlogHeader/>
             <Container style={{ margin: "auto" }}>
               {isMobile && (
-                <div>BSSDIBFISDBFBFSDKBFJDBFSBFKSBDFJFBKJDSFKJSB</div>
+                <Row>
+                  <Col md={3}>
+                  
+                  </Col>
+              </Row>
               )}
               <Row>
                 <Col>
-                  <h3 style={{ textAlign: "center", fontWeight: "bold" }}>
+                  <h3 style={{ textAlign: "center", fontWeight: "bold", marginTop:30 }}>
                     LATEST POSTS
                   </h3>
                 </Col>
@@ -152,11 +115,11 @@ export default class BlogPage extends Component {
                 </div>
               </section>
             </Container>
-            <div>
+            {/* <div>
               <Row>
                 <div class="canyon2"></div>
               </Row>
-            </div>
+            </div> */}
           </div>
         );
     }

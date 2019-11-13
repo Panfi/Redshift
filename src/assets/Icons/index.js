@@ -1,3 +1,4 @@
 import folder from './folder.svg'
+import menu from './menu.svg'
 
-export { folder };
+export { menu, folder };
