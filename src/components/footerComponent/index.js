@@ -36,7 +36,7 @@ function Footer() {
                   <Input
                     type="email"
                     name="email"
-                    id="email"
+                    id="emailFooter"
                     placeholder="Email Address"
                   />
                 </FormGroup>

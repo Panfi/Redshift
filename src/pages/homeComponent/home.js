@@ -9,6 +9,7 @@ import Block6 from "../../assets/images/Redshift_Icon_34-8@2x.png";
 import Block7 from "../../assets/images/Redshift_Icon_39-8.png";
 import Block8 from "../../assets/images/Redshift_Icon_36-8.png";
 import { Container, Col, Row } from "reactstrap";
+import Button from '../../components/button';
 
 function Home() {
   return (
@@ -19,7 +20,7 @@ function Home() {
             <Col md="6"></Col>
             <Col md="6">
               <div className="ml-5">
-                <h1>
+                <h1 style={{ textTransform:"uppercase"}}>
                   Build resilience <br />
                   against modern <br />
                   cyber attacks
@@ -31,9 +32,10 @@ function Home() {
                   and track <br />
                   them to remediation.
                 </p>
-                <a href="#" className="btn btn-default mt-3">
+                <Button type="btn-default" title="Learn More" />
+                {/* <a href="#" className="btn btn-default mt-3">
                   Learn More
-                </a>
+                </a> */}
               </div>
             </Col>
             <Col md="12">
@@ -52,7 +54,7 @@ function Home() {
               <h3>Your cyber security journey</h3>
             </Col>
             <Col md="6">
-              <p className="mb-5">
+              <p className="mb-5" style={{ marginTop:"70px"}}>
                 Lorem ipsum dolor sit amet, <br />
                 consectetur adipiscing elit. <br />
                 Quisque ut tellus purus.
@@ -69,7 +71,7 @@ function Home() {
       </Container>
       <Container className="mt-5">
         <div className="approach">
-          <h3 className="text-center">Our three-step cyber approach</h3>
+          <h3 className="text-center" style={{ paddingTop:"70px"}}>Our three-step cyber approach</h3>
           <Row>
             <Col md="4">
               <h1>01</h1>
@@ -314,7 +316,7 @@ function Home() {
                 </Col>
               </Row>
               <div
-                style={{ paddingTop: "100px", paddingBottom: "100px" }}
+                style={{ paddingTop: "100px", paddingBottom: "0px" }}
               ></div>
             </Container>
           </div>
