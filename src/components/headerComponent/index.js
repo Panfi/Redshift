@@ -14,6 +14,7 @@ import {
 import {withRouter, Link } from 'react-router-dom'
 import { isMobile } from 'react-device-detect';
 import { icons } from '../../assets';
+import { scroller, animateScroll } from "react-scroll";
 
 const Links = [
   {
@@ -44,6 +45,23 @@ class Header extends Component {
     this.setState({
       menu:value
     })
+  }
+
+  ScrollTo = () => {
+    const { location, history } = this.props
+    if (location.pathname === "/") {
+      return scroller.scrollTo('services', {
+        duration: 500,
+        hashSpy: true,
+        delay: 100,
+        smooth: true,
+      });
+    }
+    this.props.history.push({
+      pathname: '/',
+      state: { goto: "services" }
+    })
+    
   }
 
   render() {
@@ -98,7 +116,7 @@ class Header extends Component {
                             />
                           )}
                           {data.name === "Service" ? (
-                            <div style={{ color: '#888' }}>
+                            <div style={{ color: '#888' }} className="service-link" onClick={this.ScrollTo}>
                                 {data.name}
                             </div>
                           ) : (
