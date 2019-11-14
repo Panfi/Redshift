@@ -1,5 +1,5 @@
 .home {
-  background: #000;
+  /* background: #000; */
   /* padding-top: 30px !important; */
   color: #fff !important;
 }
@@ -111,5 +111,5 @@
   position: absolute;
   object-fit:cover;
   width: 100vw;
-  height:initial;
+  height: inherit;
 }

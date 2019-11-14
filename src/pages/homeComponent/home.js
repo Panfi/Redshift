@@ -64,14 +64,14 @@ function Home() {
               <h3>Your cyber security journey</h3>
             </Col>
             <Col md="6">
-              <p className="mb-5" style={{ marginTop:"70px"}}>
+              <p className="mb-5" style={{ marginTop:"30px"}}>
                 Lorem ipsum dolor sit amet, <br />
                 consectetur adipiscing elit. <br />
                 Quisque ut tellus purus.
                 <br /> In elementum, mi vitae finibus
                 <br /> ultricies, enim mauris pulvinar velit
               </p>
-              <Button type="btn-default" title="Contact Us" />
+              <Button style={{ paddingBottom:"-20px"}} type="btn-default" title="Contact Us" />
               {/* <a href="" className="btn btn-default mb-5">
                 Contact Us
               </a> */}
