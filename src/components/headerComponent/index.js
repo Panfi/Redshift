@@ -57,7 +57,7 @@ class Header extends Component {
         smooth: true,
       });
     }
-    this.props.history.push({
+    history.push({
       pathname: '/',
       state: { goto: "services" }
     })
@@ -65,7 +65,7 @@ class Header extends Component {
   }
 
   onLink = (link) => {
-    const { location, history } = this.props
+    const { location } = this.props
     if (location.pathname === link) {
      return  animateScroll.scrollToTop();
     }
