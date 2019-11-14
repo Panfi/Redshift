@@ -37,7 +37,7 @@ const Links = [
 
 class Header extends Component {
   state = {
-    menu:-window.innerWidth
+    menu:0
   }
 
   menu = (value) => {
@@ -51,8 +51,8 @@ class Header extends Component {
     if (isMobile) {
       return (
         <div style={{ position: 'fixed', zIndex: 1, width: '100%', paddingTop: 20 }}>
-          <div style={{ height: '100vh', width: '100%', backgroundColor: '#fff', zIndex: 2, position: 'absolute', right: this.state.menu, top: 0, transition: '0.3s' }}>
-            <img src={icons.menu} style={{ width: '30px', marginRight: 10 }} alt="" onClick={() => this.menu(-window.innerWidth)} />
+          <div style={{ height: '100vh', width:this.state.menu, backgroundColor: '#fff', zIndex: 2, position: 'absolute', right: 0, top: 0, transition: '0.3s' }}>
+            <img src={icons.menu} style={{ width: '30px', marginRight: 10 }} alt="" onClick={() => this.menu(0)} />
           </div>
           <Container fluid className="header">
             <Row>
@@ -60,7 +60,7 @@ class Header extends Component {
                 <img src={logo} style={{ width: '100%' }} alt="" />
               </Col>
               <Col style={{ textAlign: 'right' }}>
-                <img src={icons.menu} style={{ width: '30px', marginRight: 10 }} alt="" onClick={() => this.menu(0)}/>
+                <img src={icons.menu} style={{ width: '30px', marginRight: 10 }} alt="" onClick={() => this.menu('100%')}/>
               </Col>
             </Row>
           </Container>

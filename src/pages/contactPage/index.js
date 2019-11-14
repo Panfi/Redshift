@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Form, FormGroup, Input, FormText, } from 'reactstrap';
+import { Container, Row, Col, Form, FormGroup, Input, } from 'reactstrap';
 import Button from '../../components/button';
-import googleMap from '../../assets/images/map.jpg'
 import "./contact.css";
 import ContactHeader from './contactHeader';
 
@@ -15,7 +14,6 @@ export default class ContactPage extends Component {
             <Container className="mt-5 mb-5" style={{paddingTop:"70px"}}>
               <Row>
                 <Col md="7">
-                  {/* <img src={googleMap} alt="" style={{ width: "520px" }} /> */}
                   <div class="mapouter">
                     <div class="gmap_canvas">
                       <iframe
