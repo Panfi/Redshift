@@ -27,3 +27,17 @@ textarea#message {
     background: #c3c3c3;
     box-shadow: none !important;
 }
+
+.mapouter {
+                    position: relative;
+                    text-align: right;
+                    height: 500px;
+                    width: 600px;
+                }
+                
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none!important;
+                    height: 500px;
+                    width: 600px;
+                }

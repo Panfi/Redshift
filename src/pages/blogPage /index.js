@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import BlogCard from './blogCard';
-import { Container, Row, Col } from 'reactstrap'
+import { Container, Row, Col, Input } from 'reactstrap'
 import Button from '../../components/button';
 import BlogCategories from './blogCategories';
 import { isMobile } from 'react-device-detect';
@@ -18,7 +18,18 @@ const image2 =
     const image5 =
       "https://images.unsplash.com/photo-1496065187959-7f07b8353c55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80";
 
-
+const list = [
+  "Penetration Testing",
+  "Red Team",
+  "Phishing & Social Media",
+  "Password Auditing",
+  "Threat Modelling",
+  "Cyber Security Strategy Consulting",
+  "Incident Response",
+  "Security Research and Development",
+  "Products",
+  "Events"
+];
 
 export default class BlogPage extends Component {
     render() {
@@ -28,8 +39,22 @@ export default class BlogPage extends Component {
             <Container style={{ margin: "auto" }}>
               {isMobile && (
                 <Row>
-                  <Col md={3}>
-                  
+                  <Col md={3} className="mx-auto mt-5">
+                    <div
+                      style={{
+                        width: 30,
+                        height: 5,
+                        backgroundColor: "red",
+                        marginBottom: 5
+                      }}
+                    />
+                    <h4 style={{ fontWeight: "bold" }}>CATEGORIES</h4>
+                    <Input type="select" name="business" id="business">
+                      <option defaultValue>Select</option>
+                      {list.map((item) => 
+                        <option>{item}</option>
+                      )}
+                    </Input>
                   </Col>
               </Row>
               )}
@@ -107,7 +132,7 @@ export default class BlogPage extends Component {
                     </Row>
                   </Col>
                   <Col md={4}>
-                    <BlogCategories onCategory={data => alert(data)} />
+                    <BlogCategories data={list} onCategory={data => alert(data)} />
                   </Col>
                 </Row>
                 <div style={{ marginLeft: 15 }}>

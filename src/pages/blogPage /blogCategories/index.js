@@ -15,7 +15,7 @@ const list = [
 ];
 
 
-export default function BlogCategories({ onCategory }) {
+export default function BlogCategories({ data, onCategory }) {
                 if (isMobile || isTablet) {
                       return null
                 }
@@ -40,7 +40,7 @@ export default function BlogCategories({ onCategory }) {
                      />
                      <h4 style={{ fontWeight: "bold" }}>CATEGORIES</h4>
                      <div style={{ listStyle: "none", marginTop: 20 }}>
-                       {list.map(data => (
+                       {data.map(item => (
                          <div
                            className="category-list"
                            style={{
@@ -49,9 +49,9 @@ export default function BlogCategories({ onCategory }) {
                              marginBottom: 5,
                              cursor: "pointer"
                            }}
-                           onClick={() => onCategory(data)}
+                           onClick={() => onCategory(item)}
                          >
-                           {data}
+                           {item}
                          </div>
                        ))}
                      </div>
