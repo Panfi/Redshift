@@ -14,6 +14,7 @@ import {
 import {withRouter, Link } from 'react-router-dom'
 import { isMobile } from 'react-device-detect';
 import { icons } from '../../assets';
+import { scroller, animateScroll } from "react-scroll";
 
 const Links = [
   {
@@ -46,8 +47,41 @@ class Header extends Component {
     })
   }
 
+  ScrollTo = () => {
+    const { location, history } = this.props
+    if (location.pathname === "/") {
+      return scroller.scrollTo('services', {
+        duration: 500,
+        hashSpy: true,
+        delay: 100,
+        smooth: true,
+      });
+    }
+    history.push({
+      pathname: '/',
+      state: { goto: "services" }
+    })
+    
+  }
+
+  onLink = (link) => {
+    const { location } = this.props
+    if (location.pathname === link) {
+     return  animateScroll.scrollToTop();
+    }
+  }
+
+  onLogo = () => {
+    const { location, history } = this.props
+    if (location.pathname === "/") {
+      return animateScroll.scrollToTop();
+    }
+    return history.push("/")
+  }
+
   render() {
     const { location } = this.props
+
     if (isMobile) {
       return (
         <div style={{ position: 'fixed', zIndex: 1, width: '100%', paddingTop: 20 }}>
@@ -57,7 +91,7 @@ class Header extends Component {
           <Container fluid className="header">
             <Row>
               <Col >
-                <img src={logo} style={{ width: '100%' }} alt="" />
+                <img src={logo} style={{ width: '100%' }} alt="" onClick={() => this.onLogo()}/>
               </Col>
               <Col style={{ textAlign: 'right' }}>
                 <img src={icons.menu} style={{ width: '30px', marginRight: 10 }} alt="" onClick={() => this.menu('100%')}/>
@@ -69,11 +103,11 @@ class Header extends Component {
       )
     }
     return (
-      <header>
-        <Container fluid className="header" style={{ position: 'fixed', zIndex: 9999 }}>
+      <header >
+        <Container fluid className="header" style={{ position: 'fixed', zIndex: 9999, }}>
           <Navbar color="black" expand="md">
             <Container>
-              <NavbarBrand href="/">
+              <NavbarBrand onClick={() => this.onLogo()}>
                 <img src={logo} style={{ width: 250 }} alt="" />
               </NavbarBrand>
               <NavbarToggler />
@@ -98,14 +132,15 @@ class Header extends Component {
                             />
                           )}
                           {data.name === "Service" ? (
-                            <div style={{ color: '#888' }}>
+                            <div style={{ color: '#888' }} className="service-link" onClick={this.ScrollTo}>
                                 {data.name}
                             </div>
                           ) : (
                             <Link
-                            to={data.link}
-                            style={{ textDecoration: "none", color:'#888' }}
-                          >
+                                to={data.link}
+                                style={{ textDecoration: "none", color: '#888' }}
+                                onClick={() => this.onLink(data.link)}
+                            >
                             {data.name}
                           </Link>
                           )} 
