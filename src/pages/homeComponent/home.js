@@ -10,12 +10,20 @@ import Block7 from "../../assets/images/Redshift_Icon_39-8.png";
 import Block8 from "../../assets/images/Redshift_Icon_36-8.png";
 import { Container, Col, Row } from "reactstrap";
 import Button from '../../components/button';
+import bgVideo from '../../assets/video/Redshift_Web_Header_03.mp4';
+
 
 function Home() {
   return (
     <div>
       <Container fluid className="home">
-        <Container className="mt-5">
+       
+        <video id="bg-video" loop autoPlay muted style={{width:window.innerWidth}}>
+            <source src={bgVideo} type="video/mp4"/>
+            Your browser does not support the video tag.
+        </video>
+        
+        <Container style={{ paddingTop: "200px"}}>
           <Row>
             <Col md="6"></Col>
             <Col md="6">
@@ -61,9 +69,10 @@ function Home() {
                 <br /> In elementum, mi vitae finibus
                 <br /> ultricies, enim mauris pulvinar velit
               </p>
-              <a href="" className="btn btn-default mb-5">
+              <Button type="btn-default" title="Contact Us" />
+              {/* <a href="" className="btn btn-default mb-5">
                 Contact Us
-              </a>
+              </a> */}
             </Col>
             <Col md="6"></Col>
           </Row>
@@ -77,9 +86,9 @@ function Home() {
               <h1>01</h1>
               <h2>penetration testing</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                ut tellus purus. In elementum, mi vitae finibus ultricies, enim
-                mauris pulvinar velit, sed fermentum lorem nisl a ligula.
+              Any technology, any platform. From web to infrastructure, 
+              our penetration tests use attack path mapping 
+              to show you the true business context of vulnerabilities.
               </p>
             </Col>
             <Col md="4">
@@ -105,7 +114,7 @@ function Home() {
       </Container>
       <Container fluid>
         <Row>
-          <div class="canyon"></div>
+          <div className="canyon"></div>
         </Row>
       </Container>
       <Container fluid>
@@ -324,7 +333,7 @@ function Home() {
       </Container>
       <Container fluid>
         <Row>
-          <div class="canyon2"></div>
+          <div className="canyon2"></div>
         </Row>
       </Container>
       <Container fluid>
