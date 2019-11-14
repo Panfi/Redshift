@@ -8,13 +8,13 @@ import { icons } from "../../../assets";
 import { isMobile } from "react-device-detect";
 
 
-const BlogCard = ({ category, image,date, title, description }) => {
+const BlogCard = ({ category, image, date, title, description, onPost }) => {
   category = "Cyber Security";
   date = "Aug 26, 2017";
   title = "TITLE TEXT";
   description = "Some quick example text to build on the card";
   return (
-    <div style={{ margin: "20px auto" }}>
+    <div style={{ margin: "20px auto" }} onClick={() => onPost(title)}>
       <Card
         style={{
           width: "100%",

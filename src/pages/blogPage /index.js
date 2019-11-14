@@ -5,17 +5,17 @@ import Button from '../../components/button';
 import BlogCategories from './blogCategories';
 import { isMobile } from 'react-device-detect';
 import BlogHeader from './blogHeader';
+import { animateScroll } from "react-scroll";
 
-
-const image =
+const image_0 =
   "https://images.unsplash.com/photo-1502117859338-fd9daa518a9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEzMDA0fQ&auto=format&fit=crop&w=500&q=60";
-const image2 =
+const image_1 =
   "https://images.unsplash.com/photo-1455165814004-1126a7199f9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80";
-  const image3 =
+  const image_2 =
     "https://images.unsplash.com/photo-1501734025636-20c3ffa3fecc?ixlib=rb-1.2.1&auto=format&fit=crop&w=659&q=80";
-    const image4 =
+    const image_3 =
       "https://images.unsplash.com/photo-1571993192866-202f70b7ec7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80";
-    const image5 =
+    const image_4 =
       "https://images.unsplash.com/photo-1496065187959-7f07b8353c55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80";
 
 const list = [
@@ -32,6 +32,10 @@ const list = [
 ];
 
 export default class BlogPage extends Component {
+    componentDidMount(){
+      animateScroll.scrollToTop();
+    }
+    onPost = (value) => this.props.history.push(`/blog/${value}`)
     render() {
         return (
           <div>
@@ -66,33 +70,15 @@ export default class BlogPage extends Component {
                 </Col>
               </Row>
               <Row style={{ margin: "auto" }}>
-                <Col md={4} style={{ margin: "auto" }}>
-                  <BlogCard image={image} />
-                </Col>
-                <Col md={4} style={{ margin: "auto" }}>
-                  <BlogCard image={image2} />
-                </Col>
-                <Col md={4} style={{ margin: "auto" }}>
-                  <BlogCard image={image3} />
-                </Col>
-                <Col md={4} style={{ margin: "auto" }}>
-                  <BlogCard image={image4} />
-                </Col>
-                <Col md={4} style={{ margin: "auto" }}>
-                  <BlogCard image={image5} />
-                </Col>
-                <Col md={4} style={{ margin: "auto" }}>
-                  <BlogCard image={image2} />
-                </Col>
-                <Col md={4} style={{ margin: "auto" }}>
-                  <BlogCard image={image3} />
-                </Col>
-                <Col md={4} style={{ margin: "auto" }}>
-                  <BlogCard image={image4} />
-                </Col>
-                <Col md={4} style={{ margin: "auto" }}>
-                  <BlogCard image={image} />
-                </Col>
+                {list.map((i, index) => {
+                  const x = index 
+                  console.log(`image_${ x }`)
+                    return (
+                      <Col key={index} md={4} style={{ margin: "auto" }}>
+                        <BlogCard image={image_4} onPost={this.onPost}/>
+                      </Col>
+                    )
+                  })}
               </Row>
               <div style={{marginLeft:15, marginBottom:20}}>
                 <Button title="View Older" type="btn-primary" />
@@ -109,25 +95,25 @@ export default class BlogPage extends Component {
                   <Col md={8}>
                     <Row>
                       <Col md={6}>
-                        <BlogCard image={image3} />
+                        <BlogCard image={image_3} />
                       </Col>
                       <Col md={6}>
-                        <BlogCard image={image4} />
+                        <BlogCard image={image_4} />
                       </Col>
                       <Col md={6}>
-                        <BlogCard image={image5} />
+                        <BlogCard image={image_3} />
                       </Col>
                       <Col md={6}>
-                        <BlogCard image={image2} />
+                        <BlogCard image={image_1} />
                       </Col>
                       <Col md={6}>
-                        <BlogCard image={image3} />
+                        <BlogCard image={image_2} />
                       </Col>
                       <Col md={6}>
-                        <BlogCard image={image4} />
+                        <BlogCard image={image_3} />
                       </Col>
                       <Col md={6}>
-                        <BlogCard image={image} />
+                        <BlogCard image={image_0} />
                       </Col>
                     </Row>
                   </Col>

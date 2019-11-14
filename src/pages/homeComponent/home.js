@@ -25,8 +25,8 @@ function Home() {
         
         <Container style={{ paddingTop: "200px"}}>
           <Row>
-            <Col md="6"></Col>
-            <Col md="6">
+            <Col md="7"></Col>
+            <Col md="5">
               <div className="ml-5">
                 <h1 style={{ textTransform:"uppercase"}}>
                   Build resilience <br />
@@ -40,6 +40,7 @@ function Home() {
                   and track <br />
                   them to remediation.
                 </p>
+                <br />
                 <Button type="btn-default" title="Learn More" />
                 {/* <a href="#" className="btn btn-default mt-3">
                   Learn More
@@ -47,7 +48,8 @@ function Home() {
               </div>
             </Col>
             <Col md="12">
-              <p className="text-center mt-5 mb-5">
+              <p className="text-center mt-5 mb-5" 
+                style={{paddingTop:"250px"}}>
                 Any technology, any platform. From web to infrastruture, our
                 penetration tests use
                 <br /> attack path mapping to show you the true business context
@@ -56,7 +58,7 @@ function Home() {
             </Col>
           </Row>
         </Container>
-        <Container>
+        <Container style={{paddingTop:"230px"}}>
           <Row>
             <Col md="12" className="text-center">
               <h3>Your cyber security journey</h3>

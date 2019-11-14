@@ -1,20 +1,6 @@
 import React from 'react'
 import { isMobile, isTablet } from 'react-device-detect'
 
-const list = [
-  "Penetration Testing",
-  "Red Team",
-  "Phishing & Social Media",
-  "Password Auditing",
-  "Threat Modelling",
-  "Cyber Security Strategy Consulting",
-  "Incident Response",
-  "Security Research and Development",
-  "Products",
-  "Events"
-];
-
-
 export default function BlogCategories({ data, onCategory }) {
                 if (isMobile || isTablet) {
                       return null
