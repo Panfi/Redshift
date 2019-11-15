@@ -113,3 +113,17 @@
   width: 100vw;
   height: auto !important;
 }
+
+@media screen and (max-width: 720px) {
+
+  .approach h3 {
+    margin-top: 100px !important;
+  }
+  .bg-service {
+    padding-left: 0px !important;
+  }
+  #bg-video {
+    background-color: #000 !important;
+    height: 200vh !important;
+  }
+}

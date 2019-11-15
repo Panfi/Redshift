@@ -11,6 +11,7 @@ import Block8 from "../../assets/images/Redshift_Icon_36-8.png";
 import { Container, Col, Row } from "reactstrap";
 import Button from '../../components/button';
 import { scroller } from 'react-scroll';
+import { isMobile } from 'react-device-detect';
 
 import bgVideo from '../../assets/video/Redshift_Web_Header_03.mp4';
 class Home extends Component {
@@ -55,14 +56,11 @@ class Home extends Component {
                 </p>
                   <br />
                   <Button type="btn-default" title="Learn More" />
-                  {/* <a href="#" className="btn btn-default mt-3">
-                  Learn More
-                </a> */}
                 </div>
               </Col>
               <Col md="12">
                 <p className="text-center mt-5 mb-5"
-                  style={{ paddingTop: "250px" }}>
+                  style={{ paddingTop: "370px" }}>
                   Any technology, any platform. From web to infrastruture, our
                   penetration tests use
                 <br /> attack path mapping to show you the true business context
@@ -76,26 +74,12 @@ class Home extends Component {
               <Col md="12" className="text-center">
                 <h3>Your cyber security journey</h3>
               </Col>
-              <Col md="6">
-                <p className="mb-5" style={{ marginTop: "30px" }}>
-                  Lorem ipsum dolor sit amet, <br />
-                  consectetur adipiscing elit. <br />
-                  Quisque ut tellus purus.
-                <br /> In elementum, mi vitae finibus
-                <br /> ultricies, enim mauris pulvinar velit
-              </p>
-                <Button style={{ paddingBottom: "-20px" }} type="btn-default" title="Contact Us" />
-                {/* <a href="" className="btn btn-default mb-5">
-                Contact Us
-              </a> */}
-              </Col>
-              <Col md="6"></Col>
             </Row>
           </Container>
         </Container>
         <Container className="mt-5">
           <div className="approach">
-            <h3 className="text-center" style={{ paddingTop: "70px" }}>Our three-step cyber approach</h3>
+            <h3 className="text-center" style={{ paddingTop: isMobile ? 0 : "270px" }}>Our three-step cyber approach</h3>
             <Row>
               <Col md="4">
                 <h1>01</h1>
@@ -134,28 +118,30 @@ class Home extends Component {
         </Container>
         <Container fluid>
           <Row>
-            <div className="bg-service" id="services">
-              <div
-                className="text-center"
-                style={{
-                  color: "white",
-                  paddingTop: "100px",
-                  paddingBottom: "100px"
-                }}
-              >
-                <h3
+          <div className="bg-service" id="services">
+              <Col xs="12">
+                <div
+                  className="text-center"
                   style={{
                     color: "white",
-                    textTransform: "uppercase",
-                    fontWeight: "bolder"
+                    paddingTop: "100px",
+                    paddingBottom: "100px"
                   }}
                 >
-                  Speciality Services
-              </h3>
-                <h4 style={{ color: "white", fontWeight: "bolder" }}>
-                  We're here to help.
-              </h4>
-              </div>
+                  <h3
+                    style={{
+                      color: "white",
+                      textTransform: "uppercase",
+                      fontWeight: "bolder"
+                    }}
+                  >
+                    Speciality Services
+                </h3>
+                  <h4 style={{ color: "white", fontWeight: "bolder" }}>
+                    We're here to help.
+                </h4>
+                </div>
+              </Col>
               <Container>
                 <Row>
                   <Col md="6" style={{ color: "white", paddingTop: "100px" }}>

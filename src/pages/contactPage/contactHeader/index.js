@@ -26,14 +26,14 @@ export default function contactHeader() {
                                 paddingBottom: "100vh",
                             }}
                         >
-                            <h1 style={{ fontFamily: "Lato", fontWeight: 500, textTransform:"uppercase", marginBottom: 20, fontSize: isMobile ? "1.5rem" : "2.5rem" }}>
+                            <h1 style={{ fontFamily: "Lato", fontWeight: 500, textTransform:"uppercase", marginBottom: 20, fontSize: isMobile ? "2rem" : "2.5rem" }}>
                                 Build Resilience
                         <br />
                                 against modern
                         <br />
                                 cyber attacks
                       </h1>
-                            <p style={{ fontFamily: "Lato", fontSize: isMobile ? 12 : 16 }}>
+                            <p style={{ fontFamily: "Lato", fontSize: isMobile ? 16 : 16 }}>
                                 Gain powerful insight into your
                         <br />
                                 security posture. Redshift 
