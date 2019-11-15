@@ -38,7 +38,7 @@ const Links = [
 
 class Header extends Component {
   state = {
-    menu:0
+    menu:'100%'
   }
 
   menu = (value) => {
@@ -79,14 +79,46 @@ class Header extends Component {
     return history.push("/")
   }
 
+
+  onMobileLink = (link) => {
+    const { location, history } = this.props
+    this.setState({
+      menu: 0
+    }, () => {
+      if (location.pathname === link) {
+        return animateScroll.scrollToTop();
+      } else if (link === "/service"){
+          return this.ScrollTo()
+        }
+        return history.push(link)
+    });
+  }
+
   render() {
     const { location } = this.props
 
     if (isMobile) {
       return (
         <div style={{ position: 'fixed', zIndex: 1, width: '100%', paddingTop: 20 }}>
-          <div style={{ height: '100vh', width:this.state.menu, backgroundColor: '#fff', zIndex: 2, position: 'absolute', right: 0, top: 0, transition: '0.3s' }}>
-            <img src={icons.menu} style={{ width: '30px', marginRight: 10 }} alt="" onClick={() => this.menu(0)} />
+          <div style={{ height: '100vh', maxWidth:480, width:this.state.menu, backgroundColor: '#000', zIndex: 2, position: 'absolute', right: 0, top: 0, transition: '0.3s' }}>
+            <div style={{width:'100%', textAlign:'right'}}>
+              <img src={icons.menu} style={{ width: '30px', marginRight: 30, marginTop:20 }} alt="" onClick={() => this.menu(0)} />
+           </div>
+            <div style={{ marginTop: 30 }}>
+              {Links.map((data, i) => {
+                const bg = data.link === location.pathname ? "red" :""
+                return (
+                  <div style={{ padding: '10px 20px', backgroundColor: bg }}>
+                    <div
+                      style={{ textDecoration: "none", color: '#fff' }}
+                      onClick={() => this.onMobileLink(data.link)}
+                    >
+                      {data.name}
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
           </div>
           <Container fluid className="header">
             <Row>
@@ -96,6 +128,7 @@ class Header extends Component {
               <Col style={{ textAlign: 'right' }}>
                 <img src={icons.menu} style={{ width: '30px', marginRight: 10 }} alt="" onClick={() => this.menu('100%')}/>
               </Col>
+              
             </Row>
           </Container>
 
