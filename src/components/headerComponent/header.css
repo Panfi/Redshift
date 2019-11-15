@@ -5,36 +5,48 @@ header {
 
 .navbar {
   font-family: "Lato", sans-serif;
-  transition: 0.3s;
+  transition: 0.3s !important;
 }
 .navbar a {
   padding-left: 30px;
   color: #fff;
   border: solid 1px transparent;
+  transition: 0.3s !important;
+
 }
 .navbar li {
   padding-right: 30px;
   color: #fff;
   position: relative;
   top: -30px;
+  transition: 0.3s !important;
+
 }
 .navbar li a {
   padding: 5px 20px !important;
+  transition: 0.3s !important;
+
 }
 
 .navbar li a:hover {
   border: solid 1px #888;
   border-radius: 20px;
+  transition: 0.3s !important;
+
 }
 
 .navlink .active {
   border-top: solid 5px #ed1d23 !important;
+  transition: 0.3s !important;
+
 }
 
 .navbar .service-link{
   padding-left: 30px;
   color: #fff;
   border: solid 1px transparent;
+  transition: 0.3s !important;
+
 }
 .service-link{
   margin-top:-5px;
