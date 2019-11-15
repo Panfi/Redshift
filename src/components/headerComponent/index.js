@@ -38,7 +38,8 @@ const Links = [
 
 class Header extends Component {
   state = {
-    menu:'100%'
+    menu: '100%',
+    isTop:true
   }
 
   menu = (value) => {
@@ -46,6 +47,23 @@ class Header extends Component {
       menu:value
     })
   }
+
+  handleScroll = () => {
+    if (window.scrollY < 100) {
+      this.setState({ isTop : true });
+    } else {
+      this.setState({ isTop: false });
+    }
+  };
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
 
   ScrollTo = () => {
     const { location, history } = this.props
@@ -96,13 +114,13 @@ class Header extends Component {
 
   render() {
     const { location } = this.props
-
+    const { isTop } = this.state;
     if (isMobile) {
       return (
         <div style={{ position: 'fixed', zIndex: 1, width: '100%', paddingTop: 20 }}>
           <div style={{ height: '100vh', maxWidth:480, width:this.state.menu, backgroundColor: '#000', zIndex: 2, position: 'absolute', right: 0, top: 0, transition: '0.3s' }}>
             <div style={{width:'100%', textAlign:'right'}}>
-              <img src={icons.menu} style={{ width: '30px', marginRight: 30, marginTop:20 }} alt="" onClick={() => this.menu(0)} />
+              <img src={icons.close} style={{ width: '30px', marginRight: 30, marginTop:20 }} alt="" onClick={() => this.menu(0)} />
            </div>
             <div style={{ marginTop: 30 }}>
               {Links.map((data, i) => {
@@ -137,19 +155,18 @@ class Header extends Component {
     }
     return (
       <header >
-        <Container fluid className="header" style={{ position: 'fixed', zIndex: 9999, }}>
+        <Container fluid className="header" style={{ transition: '0.3s', position: 'fixed', zIndex: 9999, backgroundColor: isTop ? 'transparent':'rgba(0,0,0,0.6)' }}>
           <Navbar color="black" expand="md">
             <Container>
               <NavbarBrand onClick={() => this.onLogo()}>
-                <img src={logo} style={{ width: 250 }} alt="" />
+                <img src={logo} style={{ transition: '0.5s', width:isTop ? 250 : 100}} alt="" />
               </NavbarBrand>
               <NavbarToggler />
               <Collapse navbar>
                 <Nav className="ml-auto" navbar>
-                                {Links.map((data, i) => {
-                      
+                    {Links.map((data, i) => {
                       return (
-                        <NavItem key={i}>
+                        <NavItem key={i} style={{ top:isTop?-35:0}}>
                           {data.link === location.pathname && (
                             <div
                               style={{
@@ -157,7 +174,7 @@ class Header extends Component {
                                 width: 50,
                                 backgroundColor: "#ED1D23",
                                 position: "absolute",
-                                top: -35,
+                                top:isTop ? -27 : -25,
                                 left: "50%",
                                 marginLeft: -40,
                                 transition: "0.5s"
@@ -171,7 +188,7 @@ class Header extends Component {
                           ) : (
                             <Link
                                 to={data.link}
-                                style={{ textDecoration: "none", color: '#888' }}
+                                style={{ textDecoration: "none", color: '#888', }}
                                 onClick={() => this.onLink(data.link)}
                             >
                             {data.name}
