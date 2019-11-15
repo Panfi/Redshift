@@ -102,7 +102,7 @@ class Header extends Component {
         <div style={{ position: 'fixed', zIndex: 1, width: '100%', paddingTop: 20 }}>
           <div style={{ height: '100vh', maxWidth:480, width:this.state.menu, backgroundColor: '#000', zIndex: 2, position: 'absolute', right: 0, top: 0, transition: '0.3s' }}>
             <div style={{width:'100%', textAlign:'right'}}>
-              <img src={icons.menu} style={{ width: '30px', marginRight: 30, marginTop:20 }} alt="" onClick={() => this.menu(0)} />
+              <img src={icons.close} style={{ width: '30px', marginRight: 30, marginTop:20 }} alt="" onClick={() => this.menu(0)} />
            </div>
             <div style={{ marginTop: 30 }}>
               {Links.map((data, i) => {
@@ -146,8 +146,7 @@ class Header extends Component {
               <NavbarToggler />
               <Collapse navbar>
                 <Nav className="ml-auto" navbar>
-                                {Links.map((data, i) => {
-                      
+                    {Links.map((data, i) => {
                       return (
                         <NavItem key={i}>
                           {data.link === location.pathname && (
