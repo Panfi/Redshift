@@ -74,7 +74,7 @@ export default class BlogPage extends Component {
                   const x = index 
                   console.log(`image_${ x }`)
                     return (
-                      <Col key={index} md={4} style={{ margin: "auto" }}>
+                      <Col key={index} md={6} lg={4} style={{ margin: "auto" }}>
                         <BlogCard image={image_4} onPost={this.onPost}/>
                       </Col>
                     )
@@ -92,7 +92,7 @@ export default class BlogPage extends Component {
                   </Col>
                 </Row>
                 <Row style={{ margin: "auto", paddingTop: 10 }}>
-                  <Col md={8}>
+                  <Col md={12} lg={8}>
                     <Row>
                       <Col md={6}>
                         <BlogCard image={image_3} />
@@ -117,7 +117,7 @@ export default class BlogPage extends Component {
                       </Col>
                     </Row>
                   </Col>
-                  <Col md={4}>
+                  <Col md={0} lg={4}>
                     <BlogCategories data={list} onCategory={data => alert(data)} />
                   </Col>
                 </Row>
