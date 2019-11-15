@@ -6,6 +6,7 @@ import AuthorInfo from './authorInfo';
 import { isMobile } from 'react-device-detect';
 import BlogPost from './blogpost';
 import { animateScroll } from 'react-scroll';
+import RecentPosts from './recentPosts';
 
 const blogImage = "https://images.unsplash.com/photo-1496065187959-7f07b8353c55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80";
 const data = [
@@ -40,10 +41,10 @@ class SingleBlogPage extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col md={8}>
+                        <Col lg={8}>
                             <BlogPost/>
                         </Col>
-                        <Col md={4}>
+                        <Col lg={4}>
                             {!isMobile && (
                                 <SimilarPosts
                                     recentposts={data}
@@ -53,6 +54,7 @@ class SingleBlogPage extends Component {
                             )}
                         </Col>
                     </Row>
+                    {isMobile && <RecentPosts data={data} blogImage={blogImage} onPost={this.onPost} />}
                 </Container>
             </div>
         )
