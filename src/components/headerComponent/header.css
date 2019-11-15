@@ -30,3 +30,19 @@ header {
 .navlink .active {
   border-top: solid 5px #ed1d23 !important;
 }
+
+.navbar .service-link{
+  padding-left: 30px;
+  color: #fff;
+  border: solid 1px transparent;
+}
+.service-link{
+  margin-top:-5px;
+   padding: 5px 20px !important;
+}
+
+.service-link:hover {
+  cursor: pointer;
+  border: solid 1px #888;
+  border-radius: 20px;
+}
