@@ -71,7 +71,7 @@ class Home extends Component {
               </Col>
             </Row>
           </Container>
-          <Container style={{ paddingTop: "230px" }}>
+          <Container style={{ paddingTop: "0px" }}>
             <Row>
               <Col md="12" className="text-center">
                 <h3>Your cyber security journey</h3>
