@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row,Col } from 'reactstrap';
 import { isMobile } from 'react-device-detect';
+import Button from '../../../components/button';
 import bg from "../../../assets/images/Redshift_Web_Header-03.png";
 
 export default function contactHeader() {
@@ -25,24 +26,26 @@ export default function contactHeader() {
                                 paddingBottom: "100vh",
                             }}
                         >
-                            <h1 style={{ marginBottom: 20, fontSize: isMobile ? 45 : 54 }}>
+                            <h1 style={{ fontFamily: "Lato", fontWeight: 500, textTransform:"uppercase", marginBottom: 20, fontSize: isMobile ? "1.5rem" : "2.5rem" }}>
                                 Build Resilience
                         <br />
                                 against modern
                         <br />
                                 cyber attacks
                       </h1>
-                            <p style={{ fontSize: isMobile ? 20 : 24 }}>
+                            <p style={{ fontFamily: "Lato", fontSize: isMobile ? 12 : 16 }}>
                                 Gain powerful insight into your
                         <br />
-                                security posture.
+                                security posture. Redshift 
                         <br />
-                                Redshift vulnerability assessments allow
+                                vulnerability assessments allow
                         <br />
                                 you to identify risks and track
                         <br />
                                 them to remediation.
                       </p>
+                      <br />
+                        <Button type="btn-default" title="Learn More" />
                         </div>
                     </Col>
                 </Row>
