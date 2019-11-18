@@ -6,6 +6,7 @@
   transition: 0.3s;
   width:fit-content  !important;
   margin:10px 0px;
+  cursor: pointer;
 }
 
 .mybutton.btn-default {
