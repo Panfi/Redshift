@@ -4,6 +4,7 @@ import { Home, ServicePage, ContactPage, BlogPage, SingleBlogPage } from "./page
 import Footer from "./components/footerComponent";
 import Header from './components/headerComponent';
 
+
 export default (
   <div>
     <Router>

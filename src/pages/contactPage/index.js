@@ -3,10 +3,16 @@ import { Container, Row, Col, Form, FormGroup, Input, } from 'reactstrap';
 import Button from '../../components/button';
 import "./contact.css";
 import ContactHeader from './contactHeader';
+import { animateScroll } from 'react-scroll';
 
 
 const map = "https://maps.google.com/maps?q=Redshift%20Cyber%20Security%20(Pty)%20Ltd%20Process%20House%2C%20Epsom%20Downs%20Office%20Park%2C%2013%20Sloane%20Street&t=&z=13&ie=UTF8&iwloc=&output=embed"
 export default class ContactPage extends Component {
+
+  componentDidMount() {
+    animateScroll.scrollToTop();
+  }
+
     render() {
         return (
           <div className="bg-contact">
@@ -14,15 +20,15 @@ export default class ContactPage extends Component {
             <Container className="mt-5 mb-5" style={{paddingTop:"70px"}}>
               <Row>
                 <Col md="7">
-                  <div class="mapouter">
-                    <div class="gmap_canvas">
+                  <div className="mapouter">
+                    <div className="gmap_canvas">
                       <iframe
                         title="red shift map"
                         width="600"
                         height="500"
                         id="gmap_canvas"
-                        src={map} frameborder="0"
-                        scrolling="no" marginheight="0" marginwidth="0" />
+                        src={map} frameBorder="0"
+                        scrolling="no" marginHeight="0" marginWidth="0" />
                     </div>
                   </div>
                 </Col>
