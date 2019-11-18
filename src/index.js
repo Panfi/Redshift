@@ -28,6 +28,8 @@ const client = new ApolloClient({
         if (networkError) {
             console.log('Network Error', networkError);
         }
+        console.log('We connected');
+
     }
 })
 

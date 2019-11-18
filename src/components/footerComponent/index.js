@@ -1,9 +1,46 @@
-import React from 'react';
+import React, { Component } from 'react'
 import './footer.css';
 import { Container, Row, Col, Form, FormGroup, Input } from 'reactstrap';
 import Button from '../button';
+import { withApollo } from 'react-apollo';
+import {mutations } from 'graphql-methods'
 
-function Footer() {
+const emailregex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+const {subscribe } = mutations
+class Footer extends Component {
+
+  state = {
+    subscriber:""
+  }
+
+
+  onSubscriberHandler = (e) => {
+    this.setState({
+      subscriber: e.target.value
+    })
+  }
+
+  onSubmit = async() => {
+    try {
+      if (emailregex.test(this.state.subscriber)) {
+        const data = await this.props.client.mutate({
+          mutation: subscribe,
+          variables: {
+            input: {
+              email: this.state.subscriber
+            }
+          }
+        });
+        this.setState({subscriber:""})
+      }
+      return alert("Invalid email: " + emailregex.test(this.state.subscriber))
+    } catch (error) {
+    }
+  }
+
+
+
+  render() {
     return (
       <footer className="text-left">
         <Container className="mt-5">
@@ -15,7 +52,7 @@ function Footer() {
                 We're here to help answer your questions. We take great pride in
                 using our expertise for you and look forward to hearing from
               </p>
-              <Button type="btn-default" title="Contact Us" />
+              <Button type="btn-default" title="Contact Us" to={"/contact"} />
             </Col>
             <Col className="subtitle" md="3">
               <h3>Subtitle</h3>
@@ -38,10 +75,13 @@ function Footer() {
                     name="email"
                     id="emailFooter"
                     placeholder="Email Address"
+                    value={this.state.subscriber}
+                    onChange={this.onSubscriberHandler}
                   />
                 </FormGroup>
               </Form>
-              <p className="mt-5">
+              <Button type="btn-default" title="Send" onButton={this.onSubmit} />
+              <p className="mt-1">
                 Call Center <br />
                 +27 (0) 78 020 6154
               </p>
@@ -54,6 +94,7 @@ function Footer() {
         </Container>
       </footer>
     );
+  }
 }
 
-export default Footer;
+export default withApollo(Footer);
