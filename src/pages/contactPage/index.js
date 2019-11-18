@@ -19,9 +19,9 @@ export default class ContactPage extends Component {
             <ContactHeader />
             <Container className="mt-5 mb-5" style={{paddingTop:"70px"}}>
               <Row>
-                <Col md="7">
-                  <div className="mapouter">
-                    <div className="gmap_canvas">
+                <Col md="7" xs="12">
+                  <div class="mapouter">
+                    <div class="gmap_canvas">
                       <iframe
                         title="red shift map"
                         width="600"
@@ -32,7 +32,7 @@ export default class ContactPage extends Component {
                     </div>
                   </div>
                 </Col>
-                <Col md="5">
+                <Col md="5" xs="12">
                   <h3 style={{ textTransform:"uppercase", fontSize:"18px", fontWeight: "bold"}}>Get in touch</h3>
                   <Form>
                     <FormGroup>

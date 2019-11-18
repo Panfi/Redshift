@@ -29,15 +29,25 @@ textarea#message {
 }
 
 .mapouter {
-                    position: relative;
-                    text-align: right;
-                    height: 500px;
-                    width: 600px;
-                }
-                
-                .gmap_canvas {
-                    overflow: hidden;
-                    background: none!important;
-                    height: 500px;
-                    width: 600px;
-                }
+    position: relative;
+    text-align: right;
+    height: 500px;
+    width: 600px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none!important;
+    height: 500px;
+    width: 600px;
+}
+
+@media screen and (max-width: 720px) {
+    .gmap_canvas {
+        width: 100% !important;
+    }
+    .mapouter {
+        width: 100% !important;
+        margin-bottom: 50px !important;
+    }
+}
