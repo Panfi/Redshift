@@ -1,3 +1,4 @@
 import { subscribe } from './subscribe'
+import { contact } from './contact'
 
-export {subscribe}
+export { subscribe, contact}

@@ -5,7 +5,7 @@ import Button from '../button';
 import { withApollo } from 'react-apollo';
 import {mutations } from 'graphql-methods'
 
-const emailregex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+const emailregex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
 const {subscribe } = mutations
 class Footer extends Component {
 
@@ -31,9 +31,9 @@ class Footer extends Component {
             }
           }
         });
-        this.setState({subscriber:""})
+        this.setState({ subscriber: "" })
+        return data
       }
-      return alert("Invalid email: " + emailregex.test(this.state.subscriber))
     } catch (error) {
     }
   }
