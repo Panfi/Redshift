@@ -1,17 +1,10 @@
 import React, { Component } from 'react'
 import "./home.css";
-import Block1 from "../../assets/images/Redshift_Icon_40-8@2x.png";
-import Block2 from "../../assets/images/Redshift_Icon_3-8@2x.png";
-import Block3 from "../../assets/images/Redshift_Isometric_Icons_34.png";
-import Block4 from "../../assets/images/Redshift_Isometric_Icons_35.png";
-import Block5 from "../../assets/images/Redshift_Icon_36_1-8@2x.png";
-import Block6 from "../../assets/images/Redshift_Icon_34-8@2x.png";
-import Block7 from "../../assets/images/Redshift_Icon_39-8.png";
-import Block8 from "../../assets/images/Redshift_Icon_36-8.png";
 import { Container, Col, Row } from "reactstrap";
 import Button from '../../components/button';
 import { scroller } from 'react-scroll';
 import { isMobile } from 'react-device-detect';
+import  Carousel  from '../testimonials';
 
 import bgVideo from '../../assets/video/Redshift_Web_Header_03.mp4';
 class Home extends Component {
@@ -32,7 +25,7 @@ class Home extends Component {
       <div>
         <Container fluid className="home">
 
-          <video id="bg-video" loop autoPlay muted style={{ width: window.innerWidth }}>
+          <video id="bg-video" loop autoPlay muted poster="../../assets/images/bg-video.png" style={{ width: window.innerWidth }}>
             <source src={bgVideo} type="video/mp4" />
             Your browser does not support the video tag.
         </video>
@@ -145,7 +138,10 @@ class Home extends Component {
               <Container>
                 <Row>
                   <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block1} width="300" alt="" />
+                    <div className="pentest">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div>
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -165,7 +161,10 @@ class Home extends Component {
                   </p>
                   </Col>
                   <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block2} width="300" alt="" />
+                    <div className="redteam">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div>
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -201,7 +200,10 @@ class Home extends Component {
                 </div>
                 <Row>
                   <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block3} width="300" alt="" />
+                    <div className="phishing">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div>
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -221,7 +223,10 @@ class Home extends Component {
                   </p>
                   </Col>
                   <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block4} width="300" alt="" />
+                    <div className="passaudit">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div>
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -243,7 +248,10 @@ class Home extends Component {
                 </Row>
                 <Row>
                   <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block5} width="300" alt="" />
+                    <div className="threatmod">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div>
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -263,7 +271,10 @@ class Home extends Component {
                   </p>
                   </Col>
                   <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block6} width="300" alt="" />
+                    <div className="cybersec">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div>
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -285,7 +296,10 @@ class Home extends Component {
                 </Row>
                 <Row>
                   <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block7} width="300" alt="" />
+                    <div className="inrep">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div>
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -305,7 +319,10 @@ class Home extends Component {
                   </p>
                   </Col>
                   <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block8} width="300" alt="" />
+                    <div className="secres">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div>
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -341,17 +358,7 @@ class Home extends Component {
           <Row>
             <Col md="12">
               <div className="bg-testimony text-center">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-                  Quisque ut tellus purus. In elementum, <br />
-                  mi vitae finibus ultricies, enim mauris <br />
-                  pulvinar velit, sed fermentum lorem nisl a ligula.
-                <br />
-                  <small>
-                    Patric Malvoy <br />
-                    CEO of ThunderSafe
-                </small>
-                </p>
+                  <Carousel />
               </div>
             </Col>
           </Row>

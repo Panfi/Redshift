@@ -3,7 +3,8 @@ import './footer.css';
 import { Container, Row, Col, Form, FormGroup, Input } from 'reactstrap';
 import Button from '../button';
 import { withApollo } from 'react-apollo';
-import {mutations } from 'graphql-methods'
+import {mutations } from 'graphql-methods';
+
 
 const emailregex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 const {subscribe } = mutations

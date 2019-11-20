@@ -32,6 +32,201 @@
   font-weight: bold;
 }
 
+.pentest {
+  transition: 0.3s !important;
+}
+
+.pentest .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/Artboards08.png');
+  animation: play 2s steps(1) infinite;
+}
+
+.pentest:hover .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/Artboards08.png');
+  animation: play 2s steps(106) infinite;
+}
+
+@keyframes play {
+  100% { background-position: -31800px; }
+}
+
+
+.redteam {
+  transition: 0.3s !important;
+}
+
+.redteam .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/Artboards01.png');
+  animation: play 2s steps(1) infinite;
+}
+
+.redteam:hover .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/Artboards01.png');
+  animation: play 2s steps(106) infinite;
+}
+
+@keyframes play {
+  100% { background-position: -31800px; }
+}
+
+.phishing {
+  transition: 0.3s !important;
+}
+
+.phishing .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/LaptopIcons4.png');
+  animation: play 2s steps(1) infinite;
+}
+
+.phishing:hover .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/LaptopIcons4.png');
+  animation: play 2s steps(106) infinite;
+}
+
+@keyframes play {
+  100% { background-position: -31800px; }
+}
+
+
+.passaudit {
+  transition: 0.3s !important;
+}
+
+.passaudit .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/Artboards09.png');
+  animation: play 2s steps(1) infinite;
+}
+
+.passaudit:hover .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/Artboards09.png');
+  animation: play 2s steps(106) infinite;
+}
+
+@keyframes play {
+  100% { background-position: -31800px; }
+}
+
+
+.threatmod {
+  transition: 0.3s !important;
+}
+
+.threatmod .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/Artboards03.png');
+  animation: play 2s steps(1) infinite;
+}
+
+.threatmod:hover .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/Artboards03.png');
+  animation: play 2s steps(106) infinite;
+}
+
+@keyframes play {
+  100% { background-position: -31800px; }
+}
+
+.cybersec {
+  transition: 0.3s !important;
+}
+
+.cybersec .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/Artboards05.png');
+  animation: play 2s steps(1) infinite;
+}
+
+.cybersec:hover .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/Artboards05.png');
+  animation: play 2s steps(106) infinite;
+}
+
+@keyframes play {
+  100% { background-position: -31800px; }
+}
+
+.inrep {
+  transition: 0.3s !important;
+}
+
+.inrep .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/Artboards06.png');
+  animation: play 2s steps(1) infinite;
+}
+
+.inrep:hover .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/Artboards06.png');
+  animation: play 2s steps(106) infinite;
+}
+
+@keyframes play {
+  100% { background-position: -31800px; }
+}
+
+.secres {
+  transition: 0.3s !important;
+}
+
+.secres .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/Artboards04.png');
+  animation: play 2s steps(1) infinite;
+}
+
+.secres:hover .normal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url('../../assets/images/Artboards04.png');
+  animation: play 2s steps(106) infinite;
+}
+
+@keyframes play {
+  100% { background-position: -31800px; }
+}
+
 .approach h3 {
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
