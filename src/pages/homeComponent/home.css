@@ -309,6 +309,19 @@
   height: auto !important;
 }
 
+.bg-testimonials ul li{
+  display: inline-block;
+}
+
+.bg-testimonials ul li:nth-child(2){
+  padding: 10px 150px;
+}
+
+.bg-testimonials img {
+  position: relative;
+  top: -80px;
+}
+
 @media screen and (max-width: 720px) {
 
   .approach h3 {

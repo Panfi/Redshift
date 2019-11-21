@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Quote from '../../assets/images/quote.png';
 import {
   Carousel,
   CarouselItem,
@@ -51,8 +52,13 @@ const MyCarousel = (props) => {
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
         key={item.src}>
-
-        <p style={{ width:"300px", margin: "0 auto", paddingBottom: "30px"}}>{item.content} <br/><br/>{item.altText}<br/>{item.caption}</p>
+        <div className="bg-testimonials">
+          <ul>
+            <li><img src={Quote} alt="" /></li>
+            <li><p style={{ width:"300px", margin: "0 auto", paddingBottom: "30px"}}>{item.content} <br/><br/>{item.altText}<br/>{item.caption}</p></li>
+            <li><img src={Quote} alt="" /></li>
+          </ul>
+        </div>
       </CarouselItem>
     );
   });
