@@ -38,7 +38,7 @@ const Links = [
 
 class Header extends Component {
   state = {
-    menu: '100%',
+    menu: '0%',
     isTop:true
   }
 

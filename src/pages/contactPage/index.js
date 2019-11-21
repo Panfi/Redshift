@@ -69,7 +69,7 @@ export default class ContactPage extends Component {
                         placeholder="Message"
                       />
                     </FormGroup>
-                    <Button type="btn-secondary" title="Send" />
+                    <Button type="btn-secondary" title="Send" onButton={this.onSubmit} />
                   </Form>
                 </Col>
                 <Col md="12" className="text-left mt-5">
