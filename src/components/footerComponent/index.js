@@ -81,7 +81,7 @@ class Footer extends Component {
                   />
                 </FormGroup>
               </Form>
-              <Button type="btn-default" title="Send" onButton={this.onSubmit} />
+              <Button type="arrow" title="" onButton={this.onSubmit} />
               <p className="mt-1">
                 Call Center <br />
                 +27 (0) 78 020 6154

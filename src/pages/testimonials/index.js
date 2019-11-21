@@ -55,7 +55,7 @@ const MyCarousel = (props) => {
         <div className="bg-testimonials">
           <ul>
             <li><img src={Quote} alt="" /></li>
-            <li><p style={{ width:"300px", margin: "0 auto", paddingBottom: "30px"}}>{item.content} <br/><br/>{item.altText}<br/>{item.caption}</p></li>
+            <li><p style={{ width:"300px", margin: "0 auto", paddingBottom: "30px"}}>{item.content} <br/><br/>{item.altText}<br/><small style={{ color:"#9f9f9f"}}>{item.caption}</small></p></li>
             <li><img src={Quote} alt="" /></li>
           </ul>
         </div>

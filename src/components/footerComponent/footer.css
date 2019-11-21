@@ -56,3 +56,14 @@ footer input[type='email']:focus {
     color: #666;
     font-size: .8rem;
 }
+.arrow::before {
+    content: ".";
+    display: block;
+    color: transparent;
+    background: url('../../assets/images/arrow.png') no-repeat;
+    position: absolute;
+    top: 39px;
+    right: 25px;
+    width: 25px;
+    
+}
