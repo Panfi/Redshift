@@ -341,12 +341,26 @@
   .bg-testimonials ul li{
     display: inline-block;
   }
+
+  ul.col-12.col-xs-12 {
+    position: relative;
+    left: -130px;
+    font-size: .8rem;
+  }
   
   .bg-testimonials ul li:nth-child(2){
     padding: 10px 150px;
   }
+
+  li:nth-child(1),
+  li:nth-child(3) {
+    /* position: relative; */
+    /* left: 250px; */
+    display: none !important;
+  }
   
   .bg-testimonials img {
     width: 30px;
+    margin: 0;
   }
 }

@@ -52,8 +52,8 @@ const MyCarousel = (props) => {
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
         key={item.src}>
-        <div className="bg-testimonials">
-          <ul>
+        <div className="row bg-testimonials">
+          <ul className="col-12 col-xs-12">
             <li><img src={Quote} alt="" /></li>
             <li><p style={{ width:"300px", margin: "0 auto", paddingBottom: "30px"}}>{item.content} <br/><br/>{item.altText}<br/><small style={{ color:"#9f9f9f"}}>{item.caption}</small></p></li>
             <li><img src={Quote} alt="" /></li>

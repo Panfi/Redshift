@@ -5,7 +5,6 @@ import Button from '../../components/button';
 import { scroller } from 'react-scroll';
 import { isMobile } from 'react-device-detect';
 import  Carousel  from '../testimonials';
-
 import bgVideo from '../../assets/video/Redshift_Web_Header_03.mp4';
 class Home extends Component {
   componentDidMount() {
@@ -96,9 +95,7 @@ class Home extends Component {
                 <h1>03</h1>
                 <h2>Cyber defense consulting</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                  ut tellus purus. In elementum, mi vitae finibus ultricies, enim
-                  mauris pulvinar velit, sed fermentum lorem nisl a ligula.
+                Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.
               </p>
               </Col>
             </Row>
@@ -152,12 +149,7 @@ class Home extends Component {
                       Penetration testing
                   </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                      <br />
-                      Quisque ut tellus purus. In elementum, mi vitae finibus
-                      ultricies,
-                    <br /> enim mauris pulvinar velit, sed fermentum lorem nisl
-                      a ligula
+                    Any technology, any platform. From web to infrastructure, <br/>our penetration tests use attack path mapping to show you <br/>the true business context of vulnerabilities.
                   </p>
                   </Col>
                   <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
@@ -214,12 +206,8 @@ class Home extends Component {
                       Phishing & social engineering
                   </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                      <br />
-                      Quisque ut tellus purus. In elementum, mi vitae finibus
-                      ultricies,
-                    <br /> enim mauris pulvinar velit, sed fermentum lorem nisl
-                      a ligula
+                    Phishing is still one of the most effective ways to breach an organization. <br/>Find out how susceptible your staff are to a targeted phishing attack.
+
                   </p>
                   </Col>
                   <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
@@ -237,12 +225,8 @@ class Home extends Component {
                       Password auditing
                   </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                      <br />
-                      Quisque ut tellus purus. In elementum, mi vitae finibus
-                      ultricies,
-                    <br /> enim mauris pulvinar velit, sed fermentum lorem nisl
-                      a ligula
+                    Password cracking for security awareness training. Find out how to stop password attacks against your staff and systems.
+
                   </p>
                   </Col>
                 </Row>
@@ -285,12 +269,7 @@ class Home extends Component {
                       Cyber security strategy consulting
                   </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                      <br />
-                      Quisque ut tellus purus. In elementum, mi vitae finibus
-                      ultricies,
-                    <br /> enim mauris pulvinar velit, sed fermentum lorem nisl
-                      a ligula
+                    Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.
                   </p>
                   </Col>
                 </Row>
@@ -310,12 +289,7 @@ class Home extends Component {
                       Incident response
                   </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                      <br />
-                      Quisque ut tellus purus. In elementum, mi vitae finibus
-                      ultricies,
-                    <br /> enim mauris pulvinar velit, sed fermentum lorem nisl
-                      a ligula
+                    We are there to support you in the event of a data breach, from detection to containment and recovery.
                   </p>
                   </Col>
                   <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
