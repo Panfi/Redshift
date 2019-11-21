@@ -334,4 +334,19 @@
     background-color: #000 !important;
     height: 200vh !important;
   }
+  .bg-testimonials ul {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .bg-testimonials ul li{
+    display: inline-block;
+  }
+  
+  .bg-testimonials ul li:nth-child(2){
+    padding: 10px 150px;
+  }
+  
+  .bg-testimonials img {
+    width: 30px;
+  }
 }
