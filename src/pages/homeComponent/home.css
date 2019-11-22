@@ -406,4 +406,9 @@
     margin-bottom: 70px;
   }
 
+  .bg-blog {
+    background-color: #000 !important;
+    background-image: none !important;
+  }
+
 }

@@ -6,7 +6,7 @@ import bg from "../../../assets/images/Redshift_Web_Header-03.png";
 
 export default function BlogHeader() {
     return (
-        <div
+        <div className="bg-blog"
             style={{
                 backgroundImage: `url(${bg})`,
                 backgroundSize:"cover",
@@ -33,7 +33,7 @@ export default function BlogHeader() {
                         <br />
                                 cyber attacks
                       </h1>
-                            <p style={{ fontFamily: "Lato", fontSize: isMobile ? 16 : 16 }}>
+                            <p style={{ fontFamily: "Lato", fontSize: isMobile ? "1.3rem" : 16 }}>
                                 Gain powerful insight into your
                         <br />
                                 security posture. Redshift 
