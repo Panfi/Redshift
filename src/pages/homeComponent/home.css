@@ -42,7 +42,7 @@
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('../../assets/images/Artboards08.png');
+  background: url('../../assets/images/penetration_2.png');
   animation: play 2s steps(1) infinite;
 }
 
@@ -50,14 +50,9 @@
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('../../assets/images/Artboards08.png');
-  animation: play 2s steps(106) infinite;
+  background: url('../../assets/images/penetration_2.png');
+  animation: play 15.0s steps(400) infinite;
 }
-
-@keyframes play {
-  100% { background-position: -31800px; }
-}
-
 
 .redteam {
   transition: 0.3s !important;
@@ -67,20 +62,16 @@
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('../../assets/images/Artboards01.png');
-  animation: play 2s steps(1) infinite;
+  background: url('../../assets/images/red_team.png');
+  animation: play 15.0s steps(1) infinite;
 }
 
 .redteam:hover .normal {
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('../../assets/images/Artboards01.png');
-  animation: play 2s steps(106) infinite;
-}
-
-@keyframes play {
-  100% { background-position: -31800px; }
+  background: url('../../assets/images/red_team.png');
+  animation: play 15.0s steps(400) infinite;
 }
 
 .phishing {
@@ -91,7 +82,7 @@
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('../../assets/images/LaptopIcons4.png');
+  background: url('../../assets/images/phishing.png');
   animation: play 2s steps(1) infinite;
 }
 
@@ -99,12 +90,8 @@
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('../../assets/images/LaptopIcons4.png');
-  animation: play 2s steps(106) infinite;
-}
-
-@keyframes play {
-  100% { background-position: -31800px; }
+  background: url('../../assets/images/phishing.png');
+  animation: play 15.0s steps(400) infinite;
 }
 
 
@@ -116,7 +103,7 @@
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('../../assets/images/Artboards09.png');
+  background: url('../../assets/images/password_audit.png');
   animation: play 2s steps(1) infinite;
 }
 
@@ -124,14 +111,9 @@
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('../../assets/images/Artboards09.png');
-  animation: play 2s steps(106) infinite;
+  background: url('../../assets/images/password_audit.png');
+  animation: play 15.0s steps(400) infinite;
 }
-
-@keyframes play {
-  100% { background-position: -31800px; }
-}
-
 
 .threatmod {
   transition: 0.3s !important;
@@ -141,7 +123,7 @@
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('../../assets/images/Artboards03.png');
+  background: url('../../assets/images/threat_modeling.png');
   animation: play 2s steps(1) infinite;
 }
 
@@ -149,13 +131,10 @@
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('../../assets/images/Artboards03.png');
-  animation: play 2s steps(106) infinite;
+  background: url('../../assets/images/threat_modeling.png');
+  animation: play 15.0s steps(400) infinite;
 }
 
-@keyframes play {
-  100% { background-position: -31800px; }
-}
 
 .cybersec {
   transition: 0.3s !important;
@@ -165,7 +144,7 @@
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('../../assets/images/Artboards05.png');
+  background: url('../../assets/images/cyber_security.png');
   animation: play 2s steps(1) infinite;
 }
 
@@ -173,12 +152,8 @@
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('../../assets/images/Artboards05.png');
-  animation: play 2s steps(106) infinite;
-}
-
-@keyframes play {
-  100% { background-position: -31800px; }
+  background: url('../../assets/images/cyber_security.png');
+  animation: play 15.0s steps(400) infinite;
 }
 
 .inrep {
@@ -189,7 +164,7 @@
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('../../assets/images/Artboards06.png');
+  background: url('../../assets/images/incident_response.png');
   animation: play 2s steps(1) infinite;
 }
 
@@ -197,13 +172,10 @@
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  background: url('../../assets/images/Artboards06.png');
-  animation: play 2s steps(106) infinite;
+  background: url('../../assets/images/incident_response.png');
+  animation: play 15.0s steps(400) infinite;
 }
 
-@keyframes play {
-  100% { background-position: -31800px; }
-}
 
 .secres {
   transition: 0.3s !important;
@@ -222,10 +194,22 @@
   height: 300px;
   margin: 0 auto;
   background: url('../../assets/images/Artboards04.png');
-  animation: play 2s steps(106) infinite;
+  animation: playSec 2s steps(106) infinite;
 }
 
 @keyframes play {
+  100% { background-position: -120000px; }
+}
+
+@keyframes play {
+  100% { background-position: -120000px; }
+}
+
+@keyframes play {
+  100% { background-position: -120000px; }
+}
+
+@keyframes playSec {
   100% { background-position: -31800px; }
 }
 
