@@ -42,6 +42,7 @@ textarea#message {
     width: 600px;
 }
 
+
 @media screen and (max-width: 720px) {
     .gmap_canvas {
         width: 100% !important;
@@ -49,5 +50,10 @@ textarea#message {
     .mapouter {
         width: 100% !important;
         margin-bottom: 50px !important;
+    }
+
+    .bg-contact-header {
+        background-color: #000 !important;
+        background-image: none !important;
     }
 }
