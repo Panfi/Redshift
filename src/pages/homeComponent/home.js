@@ -51,8 +51,8 @@ class Home extends Component {
                 </div>
               </Col>
               <Col md="12">
-                <p className="text-center mt-5 mb-5"
-                  style={{ paddingTop: "370px" }}>
+                <p className="this-block-text text-center mt-5 mb-5"
+                  style={{ paddingTop: isMobile ? "400px" :"450px" }}>
                   Any technology, any platform. From web to infrastruture, our
                   penetration tests use
                 <br /> attack path mapping to show you the true business context
@@ -61,7 +61,7 @@ class Home extends Component {
               </Col>
             </Row>
           </Container>
-          <Container style={{ paddingTop: "0px" }}>
+          <Container style={{ paddingTop: isMobile ? 0 : 0 }}>
             <Row>
               <Col md="12" className="text-center">
                 <h3>Your cyber security journey</h3>
@@ -71,7 +71,7 @@ class Home extends Component {
         </Container>
         <Container className="mt-5">
           <div className="approach">
-            <h3 className="text-center" style={{ paddingTop: isMobile ? 0 : "270px" }}>Our three-step cyber approach</h3>
+            <h3 className="text-center" style={{ paddingTop: isMobile ? 0 : "70px" }}>Our three-step cyber approach</h3>
             <Row>
               <Col md="4">
                 <h1>01</h1>

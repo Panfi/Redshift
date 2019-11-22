@@ -1,3 +1,5 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
 .home {
   /* background: #000; */
   /* padding-top: 30px !important; */
@@ -322,6 +324,27 @@
   top: -80px;
 }
 
+.carousel-control-prev-icon::before {
+   font-family: "FontAwesome";
+   content: "\f053" !important;
+   display: inline-block;
+   /* padding-right: 3px;
+   vertical-align: middle; */
+   font-weight: 500;
+   color:#ed1d23;
+}
+
+.carousel-control-next-icon::before {
+  font-family: "FontAwesome";
+  content: "\f054" !important;
+  display: inline-block;
+  /* padding-right: 3px;
+  vertical-align: middle; */
+  font-weight: 500;
+  color: #ed1d23;
+}
+
+
 @media screen and (max-width: 720px) {
 
   .approach h3 {
@@ -363,4 +386,24 @@
     width: 30px;
     margin: 0;
   }
+  
+  video {
+    display: none !important;
+  } 
+  .home {
+    background: #000 url("../../assets/images/Group1028@2x.png") no-repeat center center;
+    background-size: contain;
+    background-position-y: 60%;
+    
+  }
+  .home h1 {
+    font-size: 1.5rem;
+  }
+
+  .home h3 {
+    position: relative;
+    top: -30px !important;
+    margin-bottom: 70px;
+  }
+
 }
