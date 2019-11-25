@@ -4,6 +4,10 @@
   /* background: #000; */
   /* padding-top: 30px !important; */
   color: #fff !important;
+  background: #000 url('../../assets/images/bg-home.jpg') no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 150vh;
 }
 
 .home h3 {
@@ -33,9 +37,59 @@
   font-size: 0.9rem;
   font-weight: bold;
 }
+.home-text-block {
+  position: absolute;
+  top: 0px;
+  right: 200px;
+  width: 400px;
+}
+
+.block1 {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background: url('../../assets/images/cloud.png');
+  animation: play 15.0s steps(300) infinite;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+.block2 {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background: url('../../assets/images/server.png');
+  animation: play 15.0s steps(300) infinite;
+  position: absolute;
+  left: 320px;
+  top: 380px;
+}
+
+.block3 {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background: url('../../assets/images/server.png');
+  animation: play 15.0s steps(300) infinite;
+  position: absolute;
+  left: -37px;
+  top: 570px;
+}
+
+.block4 {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background: url('../../assets/images/micro_chip2.png');
+  animation: playMicro 15.0s steps(410) infinite;
+  position: absolute;
+  right: 0;
+  top: 700px !important;
+}
 
 .pentest {
-  transition: 0.3s !important;
+  transition: ease-in-out 3s !important;
 }
 
 .pentest .normal {
@@ -52,6 +106,8 @@
   margin: 0 auto;
   background: url('../../assets/images/penetration_2.png');
   animation: play 15.0s steps(400) infinite;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 .redteam {
@@ -201,16 +257,11 @@
   100% { background-position: -120000px; }
 }
 
-@keyframes play {
-  100% { background-position: -120000px; }
-}
-
-@keyframes play {
-  100% { background-position: -120000px; }
-}
-
 @keyframes playSec {
   100% { background-position: -31800px; }
+}
+@keyframes playMicro {
+  100% { background-position: -163999px; }
 }
 
 .approach h3 {
@@ -377,7 +428,7 @@
   .home {
     background: #000 url("../../assets/images/Group1028@2x.png") no-repeat center center;
     background-size: contain;
-    background-position-y: 60%;
+    background-position-y: 80%;
     
   }
   .home h1 {
@@ -394,5 +445,13 @@
     background-color: #000 !important;
     background-image: none !important;
   }
+  .home-text-block {
+    position: initial;
+  }
+  .block1, .block2,
+  .block3, .block4 {
+    display: none !important;
+  }
+
 
 }
