@@ -66,13 +66,6 @@ class Home extends Component {
               </Col>
             </Row>
           </Container>
-          {/* <Container style={{ paddingTop: isMobile ? 0 : 0 }}>
-            <Row>
-              <Col md="12" className="text-center">
-                <h3>Your cyber security journey</h3>
-              </Col>
-            </Row>
-          </Container> */}
         </Container>
         <Container className="mt-5">
           <div className="approach">
