@@ -24,12 +24,16 @@ class Home extends Component {
       <div>
         <Container fluid className="home">
 
-          <video id="bg-video" loop autoPlay muted poster="../../assets/images/bg-video.png" style={{ width: window.innerWidth }}>
-            <source src={bgVideo} type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
-
-          <Container style={{ paddingTop: "200px" }}>
+          {/* Animations */}
+          <Container className="animations">
+            <Row>
+                <Col md="12"><p className="block1"></p></Col>
+                <Col md="12"><p className="block2"></p></Col>
+                <Col md="12"><p className="block3"></p></Col>
+                <Col md="12"><p className="block4"></p></Col>
+            </Row>
+          </Container>
+          <Container className="home-text-block" style={{ paddingTop: "200px" }}>
             <Row>
               <Col md="7"></Col>
               <Col md="5">
@@ -50,24 +54,25 @@ class Home extends Component {
                   <Button type="btn-default" title="Learn More" />
                 </div>
               </Col>
-              <Col md="12">
+              <Col md="12" className="text-center">
                 <p className="this-block-text text-center mt-5 mb-5"
-                  style={{ paddingTop: isMobile ? "400px" :"450px" }}>
+                  style={{ paddingTop: isMobile ? "250px" :"280px" }}>
                   Any technology, any platform. From web to infrastruture, our
                   penetration tests use
                 <br /> attack path mapping to show you the true business context
                   of vulnerabilities.
               </p>
+              <h3>Your cyber security journey</h3>
               </Col>
             </Row>
           </Container>
-          <Container style={{ paddingTop: isMobile ? 0 : 0 }}>
+          {/* <Container style={{ paddingTop: isMobile ? 0 : 0 }}>
             <Row>
               <Col md="12" className="text-center">
                 <h3>Your cyber security journey</h3>
               </Col>
             </Row>
-          </Container>
+          </Container> */}
         </Container>
         <Container className="mt-5">
           <div className="approach">
