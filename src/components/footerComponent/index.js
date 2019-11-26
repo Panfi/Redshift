@@ -56,7 +56,7 @@ class Footer extends Component {
               <Button type="btn-default" title="Contact Us" to={"/contact"} />
             </Col>
             <Col className="subtitle" md="3">
-              <h3>Subtitle</h3>
+              {/* <h3>Subtitle</h3>
               <a href="!#">Orci firngilla ultricies</a>
               <br />
               <a href="!#">Mollis libero auctor</a>
@@ -65,7 +65,7 @@ class Footer extends Component {
               <br />
               <a href="!#">Imperdiet sit</a>
               <br />
-              <a href="!#">Orci firngilla ultricies</a>
+              <a href="!#">Orci firngilla ultricies</a> */}
             </Col>
             <Col md="3">
               <h3>Subscribe</h3>

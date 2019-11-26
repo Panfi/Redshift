@@ -38,31 +38,31 @@ class Home extends Component {
               <Col md="7"></Col>
               <Col md="5">
                 <div className="ml-5">
-                  <h1 style={{ textTransform: "uppercase" }}>
+                  <h1 style={{ textTransform: "uppercase", marginTop:"100px" }}>
                     Build resilience <br />
                     against modern <br />
                     cyber attacks
                 </h1>
-                  <p className="mt-4">
+                  {/* <p className="mt-4">
                     Gain powerful insight into your <br />
                     security posture. Redshift <br />
                     vulnerability assessments allow <br /> you to identity risks
                   and track <br />
                     them to remediation.
-                </p>
+                </p> */}
                   <br />
-                  <Button type="btn-default" title="Learn More" />
+                  <Button type="btn-default" title="Learn More" to={"/contact"} />
                 </div>
               </Col>
               <Col md="12" className="text-center">
-                <p className="this-block-text text-center mt-5 mb-5"
+                {/* <p className="this-block-text text-center mt-5 mb-5"
                   style={{ paddingTop: isMobile ? "250px" :"280px" }}>
                   Any technology, any platform. From web to infrastruture, our
                   penetration tests use
                 <br /> attack path mapping to show you the true business context
                   of vulnerabilities.
-              </p>
-              <h3>Your cyber security journey</h3>
+              </p> */}
+              <h3 style={{ paddingTop: isMobile ? "250px" :"280px" }}>Your cyber security journey</h3>
               </Col>
             </Row>
           </Container>
