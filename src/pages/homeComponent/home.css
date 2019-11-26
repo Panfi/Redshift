@@ -4,10 +4,12 @@
   /* background: #000; */
   /* padding-top: 30px !important; */
   color: #fff !important;
-  background: #000 url('../../assets/images/bg-home.jpg') no-repeat;
+  background: #000 url('../../assets/images/landing_page_bg_screen_150dpi_v2.jpg') no-repeat;
   background-size: cover;
   width: 100vw;
   height: 150vh;
+  background-position-x: -400px;
+  background-position-y: 50px;
 }
 
 .home h3 {
@@ -51,8 +53,8 @@
   background: url('../../assets/images/cloud.png');
   animation: play 15.0s steps(300) infinite;
   position: absolute;
-  top: 200px;
-  left: 200px;
+  top: 150px;
+  left: 90px;
 }
 
 .block2 {
@@ -62,8 +64,8 @@
   background: url('../../assets/images/server.png');
   animation: play 15.0s steps(300) infinite;
   position: absolute;
-  left: 320px;
-  top: 380px;
+  left: 260px;
+  top: 320px;
 }
 
 .block3 {
