@@ -62,7 +62,7 @@
   height: 400px;
   margin: 0 auto;
   background: url('../../assets/images/server.png');
-  animation: play 15.0s steps(300) infinite;
+  animation: play 25.0s steps(300) infinite;
   position: absolute;
   left: 260px;
   top: 320px;
@@ -73,7 +73,7 @@
   height: 400px;
   margin: 0 auto;
   background: url('../../assets/images/server.png');
-  animation: play 15.0s steps(300) infinite;
+  animation: play 25.0s steps(300) infinite;
   position: absolute;
   left: -37px;
   top: 570px;
@@ -84,7 +84,7 @@
   height: 400px;
   margin: 0 auto;
   background: url('../../assets/images/micro_chip2.png');
-  animation: playMicro 15.0s steps(410) infinite;
+  animation: playMicro 25.0s steps(410) infinite;
   position: absolute;
   right: 0;
   top: 700px !important;
@@ -407,7 +407,7 @@
     left: -130px;
     font-size: .8rem;
   }
-  
+
   .bg-testimonials ul li:nth-child(2){
     padding: 10px 150px;
   }
@@ -418,20 +418,20 @@
     /* left: 250px; */
     display: none !important;
   }
-  
+
   .bg-testimonials img {
     width: 30px;
     margin: 0;
   }
-  
+
   video {
     display: none !important;
-  } 
+  }
   .home {
     background: #000 url("../../assets/images/Group1028@2x.png") no-repeat center center;
     background-size: contain;
     background-position-y: 80%;
-    
+
   }
   .home h1 {
     font-size: 1.5rem;
