@@ -62,7 +62,7 @@
   height: 400px;
   margin: 0 auto;
   background: url('../../assets/images/server.png');
-  animation: play 25.0s steps(300) infinite;
+  animation: play 40.0s steps(300) infinite;
   position: absolute;
   left: 260px;
   top: 320px;
@@ -73,7 +73,7 @@
   height: 400px;
   margin: 0 auto;
   background: url('../../assets/images/server.png');
-  animation: play 25.0s steps(300) infinite;
+  animation: play 40.0s steps(300) infinite;
   position: absolute;
   left: -37px;
   top: 570px;
@@ -84,7 +84,7 @@
   height: 400px;
   margin: 0 auto;
   background: url('../../assets/images/micro_chip2.png');
-  animation: playMicro 25.0s steps(410) infinite;
+  animation: playMicro 40.0s steps(410) infinite;
   position: absolute;
   right: 0;
   top: 700px !important;
