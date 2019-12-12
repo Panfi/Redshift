@@ -37,11 +37,14 @@ export default class ContactPage extends Component {
                   <Form>
                     <FormGroup>
                     <Input type="select" name="business" id="business">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
+                      <option value="Penetration Testing">Penetration Testing</option>
+                      <option value="Red Team">Red Team</option>
+                      <option value="Phishing and social engineering">Phishing and social engineering</option>
+                      <option value="Password Auditing">Password Auditing</option>
+                      <option value="Threat Modelling">Threat Modelling</option>
+                      <option value="Cyber Security Strategy  Consulting">Cyber Security Strategy  Consulting</option>
+                      <option value="Incident Response">Incident Response</option>
+                      <option value="Security Research and Development">Security Research and Development</option>
                     </Input>
                     </FormGroup>
                     <FormGroup>

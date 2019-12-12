@@ -62,7 +62,7 @@
   height: 400px;
   margin: 0 auto;
   background: url('../../assets/images/server.png');
-  animation: play 40.0s steps(300) infinite;
+  animation: play 50.0s steps(300) infinite;
   position: absolute;
   left: 260px;
   top: 320px;
@@ -73,7 +73,7 @@
   height: 400px;
   margin: 0 auto;
   background: url('../../assets/images/server.png');
-  animation: play 40.0s steps(300) infinite;
+  animation: play 50.0s steps(300) infinite;
   position: absolute;
   left: -37px;
   top: 570px;
@@ -84,7 +84,7 @@
   height: 400px;
   margin: 0 auto;
   background: url('../../assets/images/micro_chip2.png');
-  animation: playMicro 40.0s steps(410) infinite;
+  animation: playMicro 50.0s steps(410) infinite;
   position: absolute;
   right: 0;
   top: 700px !important;
@@ -107,7 +107,7 @@
   height: 300px;
   margin: 0 auto;
   background: url('../../assets/images/penetration_2.png');
-  animation: play 15.0s steps(400) infinite;
+  animation: play 30.0s steps(400) infinite;
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
@@ -129,7 +129,7 @@
   height: 300px;
   margin: 0 auto;
   background: url('../../assets/images/red_team.png');
-  animation: play 15.0s steps(400) infinite;
+  animation: play 30.0s steps(400) infinite;
 }
 
 .phishing {
@@ -149,7 +149,7 @@
   height: 300px;
   margin: 0 auto;
   background: url('../../assets/images/phishing.png');
-  animation: play 15.0s steps(400) infinite;
+  animation: play 30.0s steps(400) infinite;
 }
 
 
@@ -170,7 +170,7 @@
   height: 300px;
   margin: 0 auto;
   background: url('../../assets/images/password_audit.png');
-  animation: play 15.0s steps(400) infinite;
+  animation: play 40.0s steps(400) infinite;
 }
 
 .threatmod {
@@ -190,7 +190,7 @@
   height: 300px;
   margin: 0 auto;
   background: url('../../assets/images/threat_modeling.png');
-  animation: play 15.0s steps(400) infinite;
+  animation: play 40.0s steps(400) infinite;
 }
 
 
@@ -211,7 +211,7 @@
   height: 300px;
   margin: 0 auto;
   background: url('../../assets/images/cyber_security.png');
-  animation: play 15.0s steps(400) infinite;
+  animation: play 40.0s steps(400) infinite;
 }
 
 .inrep {
@@ -231,7 +231,7 @@
   height: 300px;
   margin: 0 auto;
   background: url('../../assets/images/incident_response.png');
-  animation: play 15.0s steps(400) infinite;
+  animation: play 40.0s steps(400) infinite;
 }
 
 
@@ -252,7 +252,7 @@
   height: 300px;
   margin: 0 auto;
   background: url('../../assets/images/Artboards04.png');
-  animation: playSec 2s steps(106) infinite;
+  animation: playSec 5s steps(106) infinite;
 }
 
 @keyframes play {
