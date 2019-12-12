@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import "./home.css";
-import { Container, Col, Row } from "reactstrap";
+import { Container, Col, Row, Card, CardImg, CardText, CardBody,CardTitle,CardDeck  } from "reactstrap";
 import Button from '../../components/button';
 import { scroller } from 'react-scroll';
 import { isMobile } from 'react-device-detect';
 import  Carousel  from '../testimonials';
-import bgVideo from '../../assets/video/Redshift_Web_Header_03.mp4';
+import Red from '../../assets/images/red.png';
+import Grey from '../../assets/images/grey.png';
+import Black from '../../assets/images/black.png';
+
 class Home extends Component {
   componentDidMount() {
     const { location } = this.props
@@ -69,34 +72,63 @@ class Home extends Component {
         </Container>
         <Container className="mt-5">
           <div className="approach">
-            <h3 className="text-center" style={{ paddingTop: isMobile ? 0 : "70px" }}>Our three-step cyber approach</h3>
-            <Row>
-              <Col md="4">
-                <h1>01</h1>
+            <h3 className="text-center" style={{ paddingTop: isMobile ? 0 : "70px", marginBottom: '70px' }}>Our three-step cyber approach</h3>
+            <CardDeck>
+                {/* <h1>01</h1>
                 <h2>penetration testing</h2>
                 <p>
                   Any technology, any platform. From web to infrastructure,
                   our penetration tests use attack path mapping
                   to show you the true business context of vulnerabilities.
-              </p>
-              </Col>
-              <Col md="4">
-                <h1>02</h1>
+                </p> */}
+                
+                  <Card style={{ marginTop: "70px;"}}>
+                      <CardImg top width="100%" src={Red} alt="" />
+                      <CardBody>
+                        <CardTitle style={{ textTransform: "uppercase", fontWeight:"bold"}}>penetration testing</CardTitle>
+                        <CardText>Any technology, any platform. From web to infrastructure,
+                    our penetration tests use attack path mapping
+                    to show you the true business context of vulnerabilities.</CardText>
+                        <Button type="btn-default" title="Learn More"/>
+                      </CardBody>
+                  </Card>
+                
+
+                {/* <h1>02</h1>
                 <h2>red team</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
                   ut tellus purus. In elementum, mi vitae finibus ultricies, enim
                   mauris pulvinar velit, sed fermentum lorem nisl a ligula.
-              </p>
-              </Col>
-              <Col md="4">
-                <h1>03</h1>
+              </p> */}
+              
+                <Card style={{ marginTop: "70px;"}}>
+                      <CardImg top width="100%" src={Black} alt="" />
+                      <CardBody>
+                        <CardTitle style={{ textTransform: "uppercase", fontWeight:"bold"}}>red team</CardTitle>
+                        <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut tellus purus. In elementum, mi vitae finibus ultricies, enim
+                          mauris pulvinar velit, sed fermentum lorem nisl a ligula.</CardText>
+                          <Button type="btn-default" title="Learn More"/>
+                      </CardBody>
+                  </Card>
+                
+
+                {/* <h1>03</h1>
                 <h2>Cyber defense consulting</h2>
                 <p>
-                Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.
-              </p>
-              </Col>
-            </Row>
+                  Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.
+                </p> */}
+                
+                  <Card style={{ marginTop: "70px;"}}>
+                      <CardImg top width="100%" src={Grey} alt="" />
+                      <CardBody>
+                        <CardTitle style={{ textTransform: "uppercase", fontWeight:"bold"}}>Cyber defense consulting</CardTitle>
+                        <CardText>Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.</CardText>
+                        <Button type="btn-default" title="Learn More"/>
+                      </CardBody>
+                  </Card>
+                
+              </CardDeck>
           </div>
         </Container>
         <Container fluid>
@@ -145,7 +177,7 @@ class Home extends Component {
                       }}
                     >
                       Penetration testing
-                  </h5>
+                    </h5>
                     <p style={{ color: "#C3C3C3" }}>
                     Any technology, any platform. From web to infrastructure, <br/>our penetration tests use attack path mapping to show you <br/>the true business context of vulnerabilities.
                   </p>
