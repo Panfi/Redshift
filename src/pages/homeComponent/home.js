@@ -89,7 +89,7 @@ class Home extends Component {
                         <CardText>Any technology, any platform. From web to infrastructure,
                     our penetration tests use attack path mapping
                     to show you the true business context of vulnerabilities.</CardText>
-                        <Button type="btn-default" title="Learn More"/>
+                        <Button type="btn-primary" title="Learn More"/>
                       </CardBody>
                   </Card>
                 
@@ -108,7 +108,7 @@ class Home extends Component {
                         <CardTitle style={{ textTransform: "uppercase", fontWeight:"bold"}}>red team</CardTitle>
                         <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut tellus purus. In elementum, mi vitae finibus ultricies, enim
                           mauris pulvinar velit, sed fermentum lorem nisl a ligula.</CardText>
-                          <Button type="btn-default" title="Learn More"/>
+                          <Button type="btn-primary" title="Learn More"/>
                       </CardBody>
                   </Card>
                 
@@ -124,7 +124,7 @@ class Home extends Component {
                       <CardBody>
                         <CardTitle style={{ textTransform: "uppercase", fontWeight:"bold"}}>Cyber defense consulting</CardTitle>
                         <CardText>Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.</CardText>
-                        <Button type="btn-default" title="Learn More"/>
+                        <Button type="btn-primary" title="Learn More"/>
                       </CardBody>
                   </Card>
                 
