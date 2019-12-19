@@ -65,7 +65,7 @@ class Home extends Component {
                 <br /> attack path mapping to show you the true business context
                   of vulnerabilities.
               </p> */}
-              <h3 style={{ paddingTop: isMobile ? "250px" :"280px" }}>Your cyber security journey</h3>
+              <h3 style={{ paddingTop: isMobile ? "250px" :"280px", paddingLeft: "90px" }}>Your cyber security journey</h3>
               </Col>
             </Row>
           </Container>
