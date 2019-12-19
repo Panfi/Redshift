@@ -37,6 +37,7 @@ export default class ContactPage extends Component {
                   <Form>
                     <FormGroup>
                     <Input type="select" name="business" id="business">
+                      <option selected disabled>I'm interested in:</option>
                       <option value="Penetration Testing">Penetration Testing</option>
                       <option value="Red Team">Red Team</option>
                       <option value="Phishing and social engineering">Phishing and social engineering</option>
