@@ -1,20 +1,23 @@
 import React, { Component } from 'react'
 import "./home.css";
-import Block1 from "../../assets/images/Redshift_Icon_40-8@2x.png";
-import Block2 from "../../assets/images/Redshift_Icon_3-8@2x.png";
-import Block3 from "../../assets/images/Redshift_Isometric_Icons_34.png";
-import Block4 from "../../assets/images/Redshift_Isometric_Icons_35.png";
-import Block5 from "../../assets/images/Redshift_Icon_36_1-8@2x.png";
-import Block6 from "../../assets/images/Redshift_Icon_34-8@2x.png";
-import Block7 from "../../assets/images/Redshift_Icon_39-8.png";
-import Block8 from "../../assets/images/Redshift_Icon_36-8.png";
-import { Container, Col, Row } from "reactstrap";
+import { Container, Col, Row, Card, CardImg, CardText, CardBody, CardTitle, CardDeck } from "reactstrap";
 import Button from '../../components/button';
 import { scroller } from 'react-scroll';
 import { isMobile } from 'react-device-detect';
+import Carousel from '../testimonials';
+import Red from '../../assets/images/red.png';
+import Grey from '../../assets/images/grey.png';
+import Black from '../../assets/images/black.png';
+import Lottie from 'react-lottie';
+import { animations } from '../../assets';
 
-import bgVideo from '../../assets/video/Redshift_Web_Header_03.mp4';
 class Home extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { isStopped: false, isPaused: false };
+  }
+
   componentDidMount() {
     const { location } = this.props
     const goto = location.state ? location.state.goto : ""
@@ -28,87 +31,133 @@ class Home extends Component {
     }
   }
   render() {
+    const defaultOptions = {
+      loop: true,
+      autoplay: true,
+      rendererSettings: {
+        preserveAspectRatio: 'xMidYMid meet'
+      }
+    };
+
     return (
       <div>
-        <Container fluid className="home">
-
-          <video id="bg-video" loop autoPlay muted style={{ width: window.innerWidth }}>
-            <source src={bgVideo} type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
-
-          <Container style={{ paddingTop: "200px" }}>
+        <Container fluid className="home" style={{ backgroundColor: '#000000', minHeight: '150vh', overflowX: 'hidden', width: '100%' }}>
+          <Lottie
+            options={{
+              ...defaultOptions,
+              animationData: animations.Website_Header,
+            }}
+            style={{
+              paddingTop: 80, height: null, width: isMobile ? '150%' : null
+            }}
+            isStopped={this.state.isStopped}
+            isPaused={this.state.isPaused} />
+          <Container className="home-text-block" style={{ paddingTop: isMobile ? null : "200px", marginTop: isMobile ? -100 : null }}>
             <Row>
               <Col md="7"></Col>
               <Col md="5">
                 <div className="ml-5">
-                  <h1 style={{ textTransform: "uppercase" }}>
+                  <h1 style={{ textTransform: "uppercase", marginTop: isMobile ? "50px" : "100px", color: '#fff' }}>
                     Build resilience <br />
                     against modern <br />
                     cyber attacks
                 </h1>
-                  <p className="mt-4">
+                  {/* <p className="mt-4">
                     Gain powerful insight into your <br />
                     security posture. Redshift <br />
                     vulnerability assessments allow <br /> you to identity risks
                   and track <br />
                     them to remediation.
-                </p>
+                </p> */}
                   <br />
-                  <Button type="btn-default" title="Learn More" />
+                  <Button type="btn-default" title="Learn More" to={"/contact"} />
                 </div>
               </Col>
-              <Col md="12">
-                <p className="text-center mt-5 mb-5"
-                  style={{ paddingTop: "370px" }}>
+              <Col md="12" className="text-center">
+                {/* <p className="this-block-text text-center mt-5 mb-5"
+                  style={{ paddingTop: isMobile ? "250px" :"280px" }}>
                   Any technology, any platform. From web to infrastruture, our
                   penetration tests use
                 <br /> attack path mapping to show you the true business context
                   of vulnerabilities.
-              </p>
-              </Col>
-            </Row>
-          </Container>
-          <Container style={{ paddingTop: "0px" }}>
-            <Row>
-              <Col md="12" className="text-center">
-                <h3>Your cyber security journey</h3>
+              </p> */}
+                <h3 style={{ paddingTop: isMobile ? "250px" : "280px", paddingLeft: "90px", color: '#fff' }}>Your cyber security journey</h3>
               </Col>
             </Row>
           </Container>
         </Container>
+        {/* <Container fluid className="home"> */}
+
+        {/* Animations */}
+        {/* <Container className="animations">
+            <Row>
+              <Col md="12"><p className="block1"></p></Col>
+              <Col md="12"><p className="block2"></p></Col>
+              <Col md="12"><p className="block3"></p></Col>
+              <Col md="12"><p className="block4"></p></Col>
+            </Row>
+          </Container> */}
+
+        {/* </Container> */}
         <Container className="mt-5">
           <div className="approach">
-            <h3 className="text-center" style={{ paddingTop: isMobile ? 0 : "270px" }}>Our three-step cyber approach</h3>
-            <Row>
-              <Col md="4">
-                <h1>01</h1>
+            <h3 className="text-center" style={{ paddingTop: isMobile ? 0 : "70px", marginBottom: '70px' }}>Our three-step cyber approach</h3>
+            <CardDeck>
+              {/* <h1>01</h1>
                 <h2>penetration testing</h2>
                 <p>
                   Any technology, any platform. From web to infrastructure,
                   our penetration tests use attack path mapping
                   to show you the true business context of vulnerabilities.
-              </p>
-              </Col>
-              <Col md="4">
-                <h1>02</h1>
+                </p> */}
+
+              <Card style={{ marginTop: "70px;" }}>
+                <CardImg top width="100%" src={Red} alt="" />
+                <CardBody>
+                  <CardTitle style={{ textTransform: "uppercase", fontWeight: "bold" }}>penetration testing</CardTitle>
+                  <CardText>Any technology, any platform. From web to infrastructure,
+                  our penetration tests use attack path mapping
+                    to show you the true business context of vulnerabilities.</CardText>
+                  <Button type="btn-primary" title="Learn More" to={"/pentest"} />
+                </CardBody>
+              </Card>
+
+
+              {/* <h1>02</h1>
                 <h2>red team</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
                   ut tellus purus. In elementum, mi vitae finibus ultricies, enim
                   mauris pulvinar velit, sed fermentum lorem nisl a ligula.
-              </p>
-              </Col>
-              <Col md="4">
-                <h1>03</h1>
+              </p> */}
+
+              <Card style={{ marginTop: "70px;" }}>
+                <CardImg top width="100%" src={Black} alt="" />
+                <CardBody>
+                  <CardTitle style={{ textTransform: "uppercase", fontWeight: "bold" }}>red team</CardTitle>
+                  <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut tellus purus. In elementum, mi vitae finibus ultricies, enim
+                          mauris pulvinar velit, sed fermentum lorem nisl a ligula.</CardText>
+                  <Button type="btn-primary" title="Learn More" to={"/redteam"} />
+                </CardBody>
+              </Card>
+
+
+              {/* <h1>03</h1>
                 <h2>Cyber defense consulting</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                  ut tellus purus. In elementum, mi vitae finibus ultricies, enim
-                  mauris pulvinar velit, sed fermentum lorem nisl a ligula.
-              </p>
-              </Col>
-            </Row>
+                  Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.
+                </p> */}
+
+              <Card style={{ marginTop: "70px;" }}>
+                <CardImg top width="100%" src={Grey} alt="" />
+                <CardBody>
+                  <CardTitle style={{ textTransform: "uppercase", fontWeight: "bold" }}>Cyber defense consulting</CardTitle>
+                  <CardText>Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.</CardText>
+                  <Button type="btn-primary" title="Learn More" to={"/cyber"} />
+                </CardBody>
+              </Card>
+
+            </CardDeck>
           </div>
         </Container>
         <Container fluid>
@@ -118,7 +167,7 @@ class Home extends Component {
         </Container>
         <Container fluid>
           <Row>
-          <div className="bg-service" id="services">
+            <div className="bg-service" id="services">
               <Col xs="12">
                 <div
                   className="text-center"
@@ -144,8 +193,19 @@ class Home extends Component {
               </Col>
               <Container>
                 <Row>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block1} width="300" alt="" />
+                  <Col md="6" style={{ color: "white" }}>
+                    {/* <div className="pentest">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_01,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -154,18 +214,24 @@ class Home extends Component {
                       }}
                     >
                       Penetration testing
-                  </h5>
+                    </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                      <br />
-                      Quisque ut tellus purus. In elementum, mi vitae finibus
-                      ultricies,
-                    <br /> enim mauris pulvinar velit, sed fermentum lorem nisl
-                      a ligula
+                      Any technology, any platform. From web to infrastructure, <br />our penetration tests use attack path mapping to show you <br />the true business context of vulnerabilities.
                   </p>
                   </Col>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block2} width="300" alt="" />
+                  <Col md="6" style={{ color: "white", }}>
+                    {/* <div className="redteam">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_02,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -187,7 +253,7 @@ class Home extends Component {
                 </Row>
                 <div
                   className="text-center"
-                  style={{ color: "white", paddingTop: "100px" }}
+                  style={{ color: "white", paddingTop: 100 }}
                 >
                   <h3
                     style={{
@@ -200,8 +266,19 @@ class Home extends Component {
                 </h3>
                 </div>
                 <Row>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block3} width="300" alt="" />
+                  <Col md="6" style={{ color: "white" }}>
+                    {/* <div className="phishing">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_03,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -212,16 +289,23 @@ class Home extends Component {
                       Phishing & social engineering
                   </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                      <br />
-                      Quisque ut tellus purus. In elementum, mi vitae finibus
-                      ultricies,
-                    <br /> enim mauris pulvinar velit, sed fermentum lorem nisl
-                      a ligula
+                      Phishing is still one of the most effective ways to breach an organization. <br />Find out how susceptible your staff are to a targeted phishing attack.
+
                   </p>
                   </Col>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block4} width="300" alt="" />
+                  <Col md="6" style={{ color: "white" }}>
+                    {/* <div className="passaudit">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_04,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -232,18 +316,25 @@ class Home extends Component {
                       Password auditing
                   </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                      <br />
-                      Quisque ut tellus purus. In elementum, mi vitae finibus
-                      ultricies,
-                    <br /> enim mauris pulvinar velit, sed fermentum lorem nisl
-                      a ligula
+                      Password cracking for security awareness training. Find out how to stop password attacks against your staff and systems.
+
                   </p>
                   </Col>
                 </Row>
                 <Row>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block5} width="300" alt="" />
+                  <Col md="6" style={{ color: "white" }}>
+                    {/* <div className="threatmod">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_05,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -262,8 +353,19 @@ class Home extends Component {
                       a ligula
                   </p>
                   </Col>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block6} width="300" alt="" />
+                  <Col md="6" style={{ color: "white" }}>
+                    {/* <div className="cybersec">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_06,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -274,18 +376,24 @@ class Home extends Component {
                       Cyber security strategy consulting
                   </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                      <br />
-                      Quisque ut tellus purus. In elementum, mi vitae finibus
-                      ultricies,
-                    <br /> enim mauris pulvinar velit, sed fermentum lorem nisl
-                      a ligula
+                      Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.
                   </p>
                   </Col>
                 </Row>
                 <Row>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block7} width="300" alt="" />
+                  <Col md="6" style={{ color: "white" }}>
+                    {/* <div className="inrep">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_07,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -296,16 +404,22 @@ class Home extends Component {
                       Incident response
                   </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                      <br />
-                      Quisque ut tellus purus. In elementum, mi vitae finibus
-                      ultricies,
-                    <br /> enim mauris pulvinar velit, sed fermentum lorem nisl
-                      a ligula
+                      We are there to support you in the event of a data breach, from detection to containment and recovery.
                   </p>
                   </Col>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <img src={Block8} width="300" alt="" />
+                  <Col md="6" style={{ color: "white" }}>
+                    {/* <div className="secres">
+                      <div className="normal" width="300"></div>
+                      <div className="active" width="300"></div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_08,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -341,17 +455,7 @@ class Home extends Component {
           <Row>
             <Col md="12">
               <div className="bg-testimony text-center">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-                  Quisque ut tellus purus. In elementum, <br />
-                  mi vitae finibus ultricies, enim mauris <br />
-                  pulvinar velit, sed fermentum lorem nisl a ligula.
-                <br />
-                  <small>
-                    Patric Malvoy <br />
-                    CEO of ThunderSafe
-                </small>
-                </p>
+                <Carousel />
               </div>
             </Col>
           </Row>

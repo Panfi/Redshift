@@ -6,7 +6,7 @@ import bg from "../../../assets/images/Redshift_Web_Header-03.png";
 
 export default function contactHeader() {
     return (
-        <div
+        <div className="bg-contact-header"
             style={{
                 backgroundImage: `url(${bg})`,
                 backgroundSize: isMobile ? "cover" : "cover",

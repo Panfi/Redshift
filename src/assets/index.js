@@ -1,4 +1,5 @@
 import * as icons from './Icons'
+import * as animations from './animations'
 
 
-export {icons}
+export { icons, animations }

@@ -1,16 +1,18 @@
+/* eslint-disable no-useless-escape */
 import React, { Component } from 'react'
 import './footer.css';
 import { Container, Row, Col, Form, FormGroup, Input } from 'reactstrap';
 import Button from '../button';
 import { withApollo } from 'react-apollo';
-import {mutations } from 'graphql-methods'
+import { mutations } from 'graphql-methods';
+
 
 const emailregex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-const {subscribe } = mutations
+const { subscribe } = mutations
 class Footer extends Component {
 
   state = {
-    subscriber:""
+    subscriber: ""
   }
 
 
@@ -20,10 +22,10 @@ class Footer extends Component {
     })
   }
 
-  onSubmit = async() => {
+  onSubmit = async () => {
     try {
       if (emailregex.test(this.state.subscriber)) {
-        const data = await this.props.client.mutate({
+        await this.props.client.mutate({
           mutation: subscribe,
           variables: {
             input: {
@@ -31,7 +33,7 @@ class Footer extends Component {
             }
           }
         });
-        this.setState({subscriber:""})
+        this.setState({ subscriber: "" })
       }
       return alert("Invalid email: " + emailregex.test(this.state.subscriber))
     } catch (error) {
@@ -55,7 +57,7 @@ class Footer extends Component {
               <Button type="btn-default" title="Contact Us" to={"/contact"} />
             </Col>
             <Col className="subtitle" md="3">
-              <h3>Subtitle</h3>
+              {/* <h3>Subtitle</h3>
               <a href="!#">Orci firngilla ultricies</a>
               <br />
               <a href="!#">Mollis libero auctor</a>
@@ -64,7 +66,7 @@ class Footer extends Component {
               <br />
               <a href="!#">Imperdiet sit</a>
               <br />
-              <a href="!#">Orci firngilla ultricies</a>
+              <a href="!#">Orci firngilla ultricies</a> */}
             </Col>
             <Col md="3">
               <h3>Subscribe</h3>
@@ -80,7 +82,7 @@ class Footer extends Component {
                   />
                 </FormGroup>
               </Form>
-              <Button type="btn-default" title="Send" onButton={this.onSubmit} />
+              <Button type="arrow" title="" onButton={this.onSubmit} />
               <p className="mt-1">
                 Call Center <br />
                 +27 (0) 78 020 6154

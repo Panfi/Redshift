@@ -6,7 +6,7 @@ import bg from "../../../assets/images/Redshift_Web_Header-03.png";
 
 export default function BlogHeader() {
     return (
-        <div
+        <div className="bg-blog"
             style={{
                 backgroundImage: `url(${bg})`,
                 backgroundSize:"cover",

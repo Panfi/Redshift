@@ -22,6 +22,10 @@ footer h3 {
     font-size: 1.2rem;
 }
 
+footer a:hover {
+    color: #ed1d23 !important;
+}
+
 footer a.btn-default {
     background: transparent !important;
     color: #fff !important;
@@ -55,4 +59,15 @@ footer input[type='email']:focus {
 .text-copy {
     color: #666;
     font-size: .8rem;
+}
+.arrow::before {
+    content: ".";
+    display: block;
+    color: transparent;
+    background: url('../../assets/images/arrow.png') no-repeat;
+    position: absolute;
+    top: 39px;
+    right: 25px;
+    width: 25px;
+    
 }
