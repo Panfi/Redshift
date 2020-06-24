@@ -1,15 +1,23 @@
 import React, { Component } from 'react'
 import "./home.css";
-import { Container, Col, Row, Card, CardImg, CardText, CardBody,CardTitle,CardDeck  } from "reactstrap";
+import { Container, Col, Row, Card, CardImg, CardText, CardBody, CardTitle, CardDeck } from "reactstrap";
 import Button from '../../components/button';
 import { scroller } from 'react-scroll';
 import { isMobile } from 'react-device-detect';
-import  Carousel  from '../testimonials';
+import Carousel from '../testimonials';
 import Red from '../../assets/images/red.png';
 import Grey from '../../assets/images/grey.png';
 import Black from '../../assets/images/black.png';
+import Lottie from 'react-lottie';
+import { animations } from '../../assets';
 
 class Home extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { isStopped: false, isPaused: false };
+  }
+
   componentDidMount() {
     const { location } = this.props
     const goto = location.state ? location.state.goto : ""
@@ -23,25 +31,33 @@ class Home extends Component {
     }
   }
   render() {
+    const defaultOptions = {
+      loop: true,
+      autoplay: true,
+      rendererSettings: {
+        preserveAspectRatio: 'xMidYMid meet'
+      }
+    };
+
     return (
       <div>
-        <Container fluid className="home">
-
-          {/* Animations */}
-          <Container className="animations">
-            <Row>
-                <Col md="12"><p className="block1"></p></Col>
-                <Col md="12"><p className="block2"></p></Col>
-                <Col md="12"><p className="block3"></p></Col>
-                <Col md="12"><p className="block4"></p></Col>
-            </Row>
-          </Container>
-          <Container className="home-text-block" style={{ paddingTop: "200px" }}>
+        <Container fluid className="home" style={{ backgroundColor: '#000000', minHeight: '150vh', overflowX: 'hidden', width: '100%' }}>
+          <Lottie
+            options={{
+              ...defaultOptions,
+              animationData: animations.Website_Header,
+            }}
+            style={{
+              paddingTop: 80, height: null, width: isMobile ? '150%' : null
+            }}
+            isStopped={this.state.isStopped}
+            isPaused={this.state.isPaused} />
+          <Container className="home-text-block" style={{ paddingTop: isMobile ? null : "200px", marginTop: isMobile ? -100 : null }}>
             <Row>
               <Col md="7"></Col>
               <Col md="5">
                 <div className="ml-5">
-                  <h1 style={{ textTransform: "uppercase", marginTop: isMobile ? "50px" : "100px" }}>
+                  <h1 style={{ textTransform: "uppercase", marginTop: isMobile ? "50px" : "100px", color: '#fff' }}>
                     Build resilience <br />
                     against modern <br />
                     cyber attacks
@@ -65,70 +81,83 @@ class Home extends Component {
                 <br /> attack path mapping to show you the true business context
                   of vulnerabilities.
               </p> */}
-              <h3 style={{ paddingTop: isMobile ? "250px" :"280px", paddingLeft: "90px" }}>Your cyber security journey</h3>
+                <h3 style={{ paddingTop: isMobile ? "250px" : "280px", paddingLeft: "90px", color: '#fff' }}>Your cyber security journey</h3>
               </Col>
             </Row>
           </Container>
         </Container>
+        {/* <Container fluid className="home"> */}
+
+        {/* Animations */}
+        {/* <Container className="animations">
+            <Row>
+              <Col md="12"><p className="block1"></p></Col>
+              <Col md="12"><p className="block2"></p></Col>
+              <Col md="12"><p className="block3"></p></Col>
+              <Col md="12"><p className="block4"></p></Col>
+            </Row>
+          </Container> */}
+
+        {/* </Container> */}
         <Container className="mt-5">
           <div className="approach">
             <h3 className="text-center" style={{ paddingTop: isMobile ? 0 : "70px", marginBottom: '70px' }}>Our three-step cyber approach</h3>
             <CardDeck>
-                {/* <h1>01</h1>
+              {/* <h1>01</h1>
                 <h2>penetration testing</h2>
                 <p>
                   Any technology, any platform. From web to infrastructure,
                   our penetration tests use attack path mapping
                   to show you the true business context of vulnerabilities.
                 </p> */}
-                
-                  <Card style={{ marginTop: "70px;"}}>
-                      <CardImg top width="100%" src={Red} alt="" />
-                      <CardBody>
-                        <CardTitle style={{ textTransform: "uppercase", fontWeight:"bold"}}>penetration testing</CardTitle>
-                        <CardText>Any technology, any platform. From web to infrastructure,
-                    our penetration tests use attack path mapping
-                    to show you the true business context of vulnerabilities.</CardText>
-                        <Button type="btn-primary" title="Learn More" to={"/pentest"}/>
-                      </CardBody>
-                  </Card>
-                
 
-                {/* <h1>02</h1>
+              <Card style={{ marginTop: "70px;" }}>
+                <CardImg top width="100%" src={Red} alt="" />
+                <CardBody>
+                  <CardTitle style={{ textTransform: "uppercase", fontWeight: "bold" }}>penetration testing</CardTitle>
+                  <CardText>Any technology, any platform. From web to infrastructure,
+                  our penetration tests use attack path mapping
+                    to show you the true business context of vulnerabilities.</CardText>
+                  <Button type="btn-primary" title="Learn More" to={"/pentest"} />
+                </CardBody>
+              </Card>
+
+
+              {/* <h1>02</h1>
                 <h2>red team</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
                   ut tellus purus. In elementum, mi vitae finibus ultricies, enim
                   mauris pulvinar velit, sed fermentum lorem nisl a ligula.
               </p> */}
-              
-                <Card style={{ marginTop: "70px;"}}>
-                      <CardImg top width="100%" src={Black} alt="" />
-                      <CardBody>
-                        <CardTitle style={{ textTransform: "uppercase", fontWeight:"bold"}}>red team</CardTitle>
-                        <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut tellus purus. In elementum, mi vitae finibus ultricies, enim
-                          mauris pulvinar velit, sed fermentum lorem nisl a ligula.</CardText>
-                          <Button type="btn-primary" title="Learn More" to={"/redteam"}/>
-                      </CardBody>
-                  </Card>
-                
 
-                {/* <h1>03</h1>
+              <Card style={{ marginTop: "70px;" }}>
+                <CardImg top width="100%" src={Black} alt="" />
+                <CardBody>
+                  <CardTitle style={{ textTransform: "uppercase", fontWeight: "bold" }}>red team</CardTitle>
+                  <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut tellus purus. In elementum, mi vitae finibus ultricies, enim
+                          mauris pulvinar velit, sed fermentum lorem nisl a ligula.</CardText>
+                  <Button type="btn-primary" title="Learn More" to={"/redteam"} />
+                </CardBody>
+              </Card>
+
+
+              {/* <h1>03</h1>
                 <h2>Cyber defense consulting</h2>
                 <p>
                   Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.
                 </p> */}
-                
-                  <Card style={{ marginTop: "70px;"}}>
-                      <CardImg top width="100%" src={Grey} alt="" />
-                      <CardBody>
-                        <CardTitle style={{ textTransform: "uppercase", fontWeight:"bold"}}>Cyber defense consulting</CardTitle>
-                        <CardText>Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.</CardText>
-                        <Button type="btn-primary" title="Learn More" to={"/cyber"}/>
-                      </CardBody>
-                  </Card>
-                
-              </CardDeck>
+
+              <Card style={{ marginTop: "70px;" }}>
+                <CardImg top width="100%" src={Grey} alt="" />
+                <CardBody>
+                  <CardTitle style={{ textTransform: "uppercase", fontWeight: "bold" }}>Cyber defense consulting</CardTitle>
+                  <CardText>Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.</CardText>
+                  <Button type="btn-primary" title="Learn More" to={"/cyber"} />
+                </CardBody>
+              </Card>
+
+            </CardDeck>
           </div>
         </Container>
         <Container fluid>
@@ -138,7 +167,7 @@ class Home extends Component {
         </Container>
         <Container fluid>
           <Row>
-          <div className="bg-service" id="services">
+            <div className="bg-service" id="services">
               <Col xs="12">
                 <div
                   className="text-center"
@@ -164,11 +193,19 @@ class Home extends Component {
               </Col>
               <Container>
                 <Row>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <div className="pentest">
+                  <Col md="6" style={{ color: "white" }}>
+                    {/* <div className="pentest">
                       <div className="normal" width="300"></div>
                       <div className="active" width="300"></div>
-                    </div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_01,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -179,14 +216,22 @@ class Home extends Component {
                       Penetration testing
                     </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                    Any technology, any platform. From web to infrastructure, <br/>our penetration tests use attack path mapping to show you <br/>the true business context of vulnerabilities.
+                      Any technology, any platform. From web to infrastructure, <br />our penetration tests use attack path mapping to show you <br />the true business context of vulnerabilities.
                   </p>
                   </Col>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <div className="redteam">
+                  <Col md="6" style={{ color: "white", }}>
+                    {/* <div className="redteam">
                       <div className="normal" width="300"></div>
                       <div className="active" width="300"></div>
-                    </div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_02,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -208,7 +253,7 @@ class Home extends Component {
                 </Row>
                 <div
                   className="text-center"
-                  style={{ color: "white", paddingTop: "100px" }}
+                  style={{ color: "white", paddingTop: 100 }}
                 >
                   <h3
                     style={{
@@ -221,11 +266,19 @@ class Home extends Component {
                 </h3>
                 </div>
                 <Row>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <div className="phishing">
+                  <Col md="6" style={{ color: "white" }}>
+                    {/* <div className="phishing">
                       <div className="normal" width="300"></div>
                       <div className="active" width="300"></div>
-                    </div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_03,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -236,15 +289,23 @@ class Home extends Component {
                       Phishing & social engineering
                   </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                    Phishing is still one of the most effective ways to breach an organization. <br/>Find out how susceptible your staff are to a targeted phishing attack.
+                      Phishing is still one of the most effective ways to breach an organization. <br />Find out how susceptible your staff are to a targeted phishing attack.
 
                   </p>
                   </Col>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <div className="passaudit">
+                  <Col md="6" style={{ color: "white" }}>
+                    {/* <div className="passaudit">
                       <div className="normal" width="300"></div>
                       <div className="active" width="300"></div>
-                    </div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_04,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -255,17 +316,25 @@ class Home extends Component {
                       Password auditing
                   </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                    Password cracking for security awareness training. Find out how to stop password attacks against your staff and systems.
+                      Password cracking for security awareness training. Find out how to stop password attacks against your staff and systems.
 
                   </p>
                   </Col>
                 </Row>
                 <Row>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <div className="threatmod">
+                  <Col md="6" style={{ color: "white" }}>
+                    {/* <div className="threatmod">
                       <div className="normal" width="300"></div>
                       <div className="active" width="300"></div>
-                    </div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_05,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -284,11 +353,19 @@ class Home extends Component {
                       a ligula
                   </p>
                   </Col>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <div className="cybersec">
+                  <Col md="6" style={{ color: "white" }}>
+                    {/* <div className="cybersec">
                       <div className="normal" width="300"></div>
                       <div className="active" width="300"></div>
-                    </div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_06,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -299,16 +376,24 @@ class Home extends Component {
                       Cyber security strategy consulting
                   </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                    Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.
+                      Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.
                   </p>
                   </Col>
                 </Row>
                 <Row>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <div className="inrep">
+                  <Col md="6" style={{ color: "white" }}>
+                    {/* <div className="inrep">
                       <div className="normal" width="300"></div>
                       <div className="active" width="300"></div>
-                    </div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_07,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -319,14 +404,22 @@ class Home extends Component {
                       Incident response
                   </h5>
                     <p style={{ color: "#C3C3C3" }}>
-                    We are there to support you in the event of a data breach, from detection to containment and recovery.
+                      We are there to support you in the event of a data breach, from detection to containment and recovery.
                   </p>
                   </Col>
-                  <Col md="6" style={{ color: "white", paddingTop: "100px" }}>
-                    <div className="secres">
+                  <Col md="6" style={{ color: "white" }}>
+                    {/* <div className="secres">
                       <div className="normal" width="300"></div>
                       <div className="active" width="300"></div>
-                    </div>
+                    </div> */}
+                    <Lottie
+                      options={{
+                        ...defaultOptions,
+                        animationData: animations.WEB_Icon_08,
+                      }}
+                      height={250}
+                      isStopped={this.state.isStopped}
+                      isPaused={this.state.isPaused} />
                     <h5
                       style={{
                         textTransform: "uppercase",
@@ -362,7 +455,7 @@ class Home extends Component {
           <Row>
             <Col md="12">
               <div className="bg-testimony text-center">
-                  <Carousel />
+                <Carousel />
               </div>
             </Col>
           </Row>

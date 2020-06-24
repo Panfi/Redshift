@@ -7,7 +7,7 @@
   background: #000 url('../../assets/images/landing_page_bg_screen_150dpi_v2.jpg') no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 150vh;
+  min-height: 150vh;
   background-position-x: -400px;
   background-position-y: 50px;
 }
