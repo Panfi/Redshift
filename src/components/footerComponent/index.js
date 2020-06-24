@@ -1,17 +1,18 @@
+/* eslint-disable no-useless-escape */
 import React, { Component } from 'react'
 import './footer.css';
 import { Container, Row, Col, Form, FormGroup, Input } from 'reactstrap';
 import Button from '../button';
 import { withApollo } from 'react-apollo';
-import {mutations } from 'graphql-methods';
+import { mutations } from 'graphql-methods';
 
 
 const emailregex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-const {subscribe } = mutations
+const { subscribe } = mutations
 class Footer extends Component {
 
   state = {
-    subscriber:""
+    subscriber: ""
   }
 
 
@@ -21,10 +22,10 @@ class Footer extends Component {
     })
   }
 
-  onSubmit = async() => {
+  onSubmit = async () => {
     try {
       if (emailregex.test(this.state.subscriber)) {
-        const data = await this.props.client.mutate({
+        await this.props.client.mutate({
           mutation: subscribe,
           variables: {
             input: {
@@ -32,7 +33,7 @@ class Footer extends Component {
             }
           }
         });
-        this.setState({subscriber:""})
+        this.setState({ subscriber: "" })
       }
       return alert("Invalid email: " + emailregex.test(this.state.subscriber))
     } catch (error) {
