@@ -10,12 +10,89 @@ import Grey from '../../assets/images/grey.png';
 import Black from '../../assets/images/black.png';
 import Lottie from 'react-lottie';
 import { animations } from '../../assets';
+import ServiceCard from './ServiceCard/index';
+
+
+
+
+
+const services = [
+  {
+    name: " Penetration testing",
+    description: ` Any technology, any platform. From web to infrastructure, <br />our penetration tests use attack path mapping to show you <br />the true business context of vulnerabilities.`,
+    animation: animations.WEB_Icon_01,
+  },
+  {
+    name: "RED TEAM",
+    description: `
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                      <br />
+                      Quisque ut tellus purus. In elementum, mi vitae finibus
+                      ultricies,
+                    <br /> enim mauris pulvinar velit, sed fermentum lorem nisl
+                      a ligula
+    `,
+    animation: animations.WEB_Icon_02,
+  },
+  {
+    name: "PHISHING & SOCIAL ENGINEERING",
+    description: `
+    Phishing is still one of the most effective ways to breach an organization. <br />Find out how susceptible your staff are to a targeted phishing attack.
+  `,
+    animation: animations.WEB_Icon_03,
+  },
+  {
+    name: "PASSWORD AUDITING",
+    description: `
+   Password cracking for security awareness training. Find out how to stop<br/>password attacks against your staff and systems.
+  `,
+    animation: animations.WEB_Icon_04,
+  },
+  {
+    name: "THREAT MODELLING",
+    description: `
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
+  Quisque ut tellus purus. In elementum, mi vitae finibus ultricies,<br/>
+  enim mauris pulvinar velit, sed fermentum lorem nisl a ligula
+  `,
+    animation: animations.WEB_Icon_05,
+  },
+  {
+    name: "CYBER SECURITY STRATEGY CONSULTING",
+    description: `
+    Expert security advice to help you defend your organization against<br/>
+    modern attackers and achieve resilience to cyber attacks.
+  `,
+    animation: animations.WEB_Icon_06,
+  },
+  {
+    name: "INCIDENT RESPONSE",
+    description: `
+   We are there to support you in the event of a data breach, from detection<br/>
+   to containment and recovery.
+  `,
+    animation: animations.WEB_Icon_07,
+  },
+  {
+    name: "SECURITY RESEARCH AND DEVELOPMENT",
+    description: `
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
+Quisque ut tellus purus. In elementum, mi vitae finibus ultricies,<br/>
+enim mauris pulvinar velit, sed fermentum lorem nisl a ligula
+  `,
+    animation: animations.WEB_Icon_08,
+  },
+]
+
 
 class Home extends Component {
 
   constructor(props) {
+
     super(props);
     this.state = { isStopped: false, isPaused: false };
+    this._lottieHeartRef = React.createRef();
+
   }
 
   componentDidMount() {
@@ -30,10 +107,26 @@ class Home extends Component {
       });
     }
   }
+
+  onRefLottie = (ref) => {
+    this._lottieHeartRef = ref;
+    console.log(ref)
+  }
+
+  onMouseEnter = () => {
+    this._lottieHeartRef && this._lottieHeartRef.play();
+    console.log("animate", this._lottieHeartRef);
+  };
+
+  onMouseLeave = () => {
+    this._lottieHeartRef && this._lottieHeartRef.pause();
+    console.log("stop", this._lottieHeartRef);
+  };
+
   render() {
     const defaultOptions = {
       loop: true,
-      autoplay: true,
+      autoplay: false,
       rendererSettings: {
         preserveAspectRatio: 'xMidYMid meet'
       }
@@ -45,13 +138,15 @@ class Home extends Component {
           <Lottie
             options={{
               ...defaultOptions,
+              autoplay: true,
               animationData: animations.Website_Header,
             }}
             style={{
-              paddingTop: 80, height: null, width: isMobile ? '150%' : null
+              paddingTop: 80, height: null, width: isMobile ? '150%' : '110%',
+              marginLeft: isMobile ? null : -30
             }}
             isStopped={this.state.isStopped}
-            isPaused={this.state.isPaused} />
+            isPaused={false} />
           <Container className="home-text-block" style={{ paddingTop: isMobile ? null : "200px", marginTop: isMobile ? -100 : null }}>
             <Row>
               <Col md="7"></Col>
@@ -165,6 +260,8 @@ class Home extends Component {
             <div className="canyon"></div>
           </Row>
         </Container>
+
+        {/* SERVICES */}
         <Container fluid>
           <Row>
             <div className="bg-service" id="services">
@@ -193,251 +290,45 @@ class Home extends Component {
               </Col>
               <Container>
                 <Row>
-                  <Col md="6" style={{ color: "white" }}>
-                    {/* <div className="pentest">
-                      <div className="normal" width="300"></div>
-                      <div className="active" width="300"></div>
-                    </div> */}
-                    <Lottie
-                      options={{
-                        ...defaultOptions,
-                        animationData: animations.WEB_Icon_01,
-                      }}
-                      height={250}
-                      isStopped={this.state.isStopped}
-                      isPaused={this.state.isPaused} />
-                    <h5
-                      style={{
-                        textTransform: "uppercase",
-                        color: "white",
-                        fontWeight: "bold"
-                      }}
-                    >
-                      Penetration testing
-                    </h5>
-                    <p style={{ color: "#C3C3C3" }}>
-                      Any technology, any platform. From web to infrastructure, <br />our penetration tests use attack path mapping to show you <br />the true business context of vulnerabilities.
-                  </p>
-                  </Col>
-                  <Col md="6" style={{ color: "white", }}>
-                    {/* <div className="redteam">
-                      <div className="normal" width="300"></div>
-                      <div className="active" width="300"></div>
-                    </div> */}
-                    <Lottie
-                      options={{
-                        ...defaultOptions,
-                        animationData: animations.WEB_Icon_02,
-                      }}
-                      height={250}
-                      isStopped={this.state.isStopped}
-                      isPaused={this.state.isPaused} />
-                    <h5
-                      style={{
-                        textTransform: "uppercase",
-                        color: "white",
-                        fontWeight: "bold"
-                      }}
-                    >
-                      Red Team
-                  </h5>
-                    <p style={{ color: "#C3C3C3" }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                      <br />
-                      Quisque ut tellus purus. In elementum, mi vitae finibus
-                      ultricies,
-                    <br /> enim mauris pulvinar velit, sed fermentum lorem nisl
-                      a ligula
-                  </p>
-                  </Col>
-                </Row>
-                <div
-                  className="text-center"
-                  style={{ color: "white", paddingTop: 100 }}
-                >
-                  <h3
-                    style={{
-                      color: "white",
-                      textTransform: "uppercase",
-                      fontWeight: "bolder"
-                    }}
+                  {services.map((item, index) => {
+                    if (index > 1) return null
+                    return (
+                      <ServiceCard
+                        ref={this.onRefLottie}
+                        title={item.name}
+                        description={item.description}
+                        icon={item.animation}
+                        onMouseEnter={this.onMouseEnter}
+                        onMouseLeave={this.onMouseLeave}
+                      />
+                    )
+                  })}
+
+                  <Col md="12"
+                    className="text-center"
+                    style={{ color: "white", paddingTop: 100 }}
                   >
-                    Additional Services
-                </h3>
-                </div>
-                <Row>
-                  <Col md="6" style={{ color: "white" }}>
-                    {/* <div className="phishing">
-                      <div className="normal" width="300"></div>
-                      <div className="active" width="300"></div>
-                    </div> */}
-                    <Lottie
-                      options={{
-                        ...defaultOptions,
-                        animationData: animations.WEB_Icon_03,
-                      }}
-                      height={250}
-                      isStopped={this.state.isStopped}
-                      isPaused={this.state.isPaused} />
-                    <h5
+                    <h3
                       style={{
-                        textTransform: "uppercase",
                         color: "white",
-                        fontWeight: "bold"
+                        textTransform: "uppercase",
+                        fontWeight: "bolder"
                       }}
                     >
-                      Phishing & social engineering
-                  </h5>
-                    <p style={{ color: "#C3C3C3" }}>
-                      Phishing is still one of the most effective ways to breach an organization. <br />Find out how susceptible your staff are to a targeted phishing attack.
+                      Additional Services
+                            </h3>
+                  </Col>
+                  {services.map((item, index) => {
+                    if (index < 2) return null
+                    return (
+                      <ServiceCard
+                        title={item.name}
+                        description={item.description}
+                        icon={item.animation}
+                      />
+                    )
+                  })}
 
-                  </p>
-                  </Col>
-                  <Col md="6" style={{ color: "white" }}>
-                    {/* <div className="passaudit">
-                      <div className="normal" width="300"></div>
-                      <div className="active" width="300"></div>
-                    </div> */}
-                    <Lottie
-                      options={{
-                        ...defaultOptions,
-                        animationData: animations.WEB_Icon_04,
-                      }}
-                      height={250}
-                      isStopped={this.state.isStopped}
-                      isPaused={this.state.isPaused} />
-                    <h5
-                      style={{
-                        textTransform: "uppercase",
-                        color: "white",
-                        fontWeight: "bold"
-                      }}
-                    >
-                      Password auditing
-                  </h5>
-                    <p style={{ color: "#C3C3C3" }}>
-                      Password cracking for security awareness training. Find out how to stop password attacks against your staff and systems.
-
-                  </p>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col md="6" style={{ color: "white" }}>
-                    {/* <div className="threatmod">
-                      <div className="normal" width="300"></div>
-                      <div className="active" width="300"></div>
-                    </div> */}
-                    <Lottie
-                      options={{
-                        ...defaultOptions,
-                        animationData: animations.WEB_Icon_05,
-                      }}
-                      height={250}
-                      isStopped={this.state.isStopped}
-                      isPaused={this.state.isPaused} />
-                    <h5
-                      style={{
-                        textTransform: "uppercase",
-                        color: "white",
-                        fontWeight: "bold"
-                      }}
-                    >
-                      Threat Modelling
-                  </h5>
-                    <p style={{ color: "#C3C3C3" }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                      <br />
-                      Quisque ut tellus purus. In elementum, mi vitae finibus
-                      ultricies,
-                    <br /> enim mauris pulvinar velit, sed fermentum lorem nisl
-                      a ligula
-                  </p>
-                  </Col>
-                  <Col md="6" style={{ color: "white" }}>
-                    {/* <div className="cybersec">
-                      <div className="normal" width="300"></div>
-                      <div className="active" width="300"></div>
-                    </div> */}
-                    <Lottie
-                      options={{
-                        ...defaultOptions,
-                        animationData: animations.WEB_Icon_06,
-                      }}
-                      height={250}
-                      isStopped={this.state.isStopped}
-                      isPaused={this.state.isPaused} />
-                    <h5
-                      style={{
-                        textTransform: "uppercase",
-                        color: "white",
-                        fontWeight: "bold"
-                      }}
-                    >
-                      Cyber security strategy consulting
-                  </h5>
-                    <p style={{ color: "#C3C3C3" }}>
-                      Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.
-                  </p>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col md="6" style={{ color: "white" }}>
-                    {/* <div className="inrep">
-                      <div className="normal" width="300"></div>
-                      <div className="active" width="300"></div>
-                    </div> */}
-                    <Lottie
-                      options={{
-                        ...defaultOptions,
-                        animationData: animations.WEB_Icon_07,
-                      }}
-                      height={250}
-                      isStopped={this.state.isStopped}
-                      isPaused={this.state.isPaused} />
-                    <h5
-                      style={{
-                        textTransform: "uppercase",
-                        color: "white",
-                        fontWeight: "bold"
-                      }}
-                    >
-                      Incident response
-                  </h5>
-                    <p style={{ color: "#C3C3C3" }}>
-                      We are there to support you in the event of a data breach, from detection to containment and recovery.
-                  </p>
-                  </Col>
-                  <Col md="6" style={{ color: "white" }}>
-                    {/* <div className="secres">
-                      <div className="normal" width="300"></div>
-                      <div className="active" width="300"></div>
-                    </div> */}
-                    <Lottie
-                      options={{
-                        ...defaultOptions,
-                        animationData: animations.WEB_Icon_08,
-                      }}
-                      height={250}
-                      isStopped={this.state.isStopped}
-                      isPaused={this.state.isPaused} />
-                    <h5
-                      style={{
-                        textTransform: "uppercase",
-                        color: "white",
-                        fontWeight: "bold"
-                      }}
-                    >
-                      security research and development
-                  </h5>
-                    <p style={{ color: "#C3C3C3" }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                      <br />
-                      Quisque ut tellus purus. In elementum, mi vitae finibus
-                      ultricies,
-                    <br /> enim mauris pulvinar velit, sed fermentum lorem nisl
-                      a ligula
-                  </p>
-                  </Col>
                 </Row>
                 <div
                   style={{ paddingTop: "100px", paddingBottom: "0px" }}
@@ -446,6 +337,7 @@ class Home extends Component {
             </div>
           </Row>
         </Container>
+
         <Container fluid>
           <Row>
             <div className="canyon2"></div>
