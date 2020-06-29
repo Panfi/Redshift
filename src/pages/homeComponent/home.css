@@ -315,7 +315,7 @@
   background: url("../../assets/images/canyon.png") no-repeat;
   background-size: cover;
   min-height: 220px;
-  margin: 100px 0px 40px;
+  margin: 100px 0px 0px;
   width: 100% !important;
 }
 
@@ -333,7 +333,7 @@
   background: url("../../assets/images/canyon.png") no-repeat;
   background-size: cover;
   min-height: 220px;
-  margin:20px 0px;
+  /* margin:20px 0px; */
   width: 100% !important;
 }
 
