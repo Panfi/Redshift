@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import "./home.css";
 import { Container, Col, Row, Card, CardImg, CardText, CardBody, CardTitle, CardDeck } from "reactstrap";
 import Button from '../../components/button';
+import BootstrapCarousel from '../../components/homeSlider';
 import { scroller } from 'react-scroll';
 import { isMobile } from 'react-device-detect';
 import Carousel from '../testimonials';
@@ -197,6 +198,8 @@ class Home extends Component {
         <Container className="mt-5">
           <div className="approach">
             <h3 className="text-center" style={{ paddingTop: isMobile ? 0 : "70px", marginBottom: '70px' }}>Our three-step cyber approach</h3>
+            <BootstrapCarousel></BootstrapCarousel>
+            
             <CardDeck>
               {/* <h1>01</h1>
                 <h2>penetration testing</h2>
