@@ -153,7 +153,7 @@ class Home extends Component {
               <Col md="7"></Col>
               <Col md="5">
                 <div className="ml-5">
-                  <h1 style={{ textTransform: "uppercase", marginTop: isMobile ? "50px" : "100px", color: '#fff' }}>
+                  <h1 style={{ textTransform: "uppercase", marginTop: isMobile ? "50px" : "10px", color: '#fff' }}>
                     Build resilience <br />
                     against modern <br />
                     cyber attacks
