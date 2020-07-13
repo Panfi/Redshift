@@ -212,7 +212,7 @@ class Home extends Component {
                   <CardTitle style={{ textTransform: "uppercase", fontWeight: "bold" }}>penetration testing</CardTitle>
                   <CardText>Any technology, any platform. From web to infrastructure,
                   our penetration tests use attack path mapping
-                    to show you the true business context of vulnerabilities.</CardText>
+                    to show you the true business context of vulnerabilities..</CardText>
                   <Button type="btn-primary" title="Learn More" to={"/pentest"} />
                 </CardBody>
               </Card>
