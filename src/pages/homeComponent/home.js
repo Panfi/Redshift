@@ -135,7 +135,7 @@ class Home extends Component {
 
     return (
       <div>
-        <Container fluid className="home" style={{ backgroundColor: '#000000', minHeight: '150vh', overflowX: 'hidden', width: '100%' }}>
+        <Container fluid className="home" style={{ backgroundColor: '#000000', minHeight: '100vh', overflowX: 'hidden', width: '100%' }}>
           <Lottie
             options={{
               ...defaultOptions,
