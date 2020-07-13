@@ -169,7 +169,7 @@ class Home extends Component {
                   <Button type="btn-default" title="Learn More" to={"/contact"} />
                 </div>
               </Col>
-              <Col md="12" className="text-center">
+              <Col md="12">
                 {/* <p className="this-block-text text-center mt-5 mb-5"
                   style={{ paddingTop: isMobile ? "250px" :"280px" }}>
                   Any technology, any platform. From web to infrastruture, our
@@ -177,7 +177,7 @@ class Home extends Component {
                 <br /> attack path mapping to show you the true business context
                   of vulnerabilities.
               </p> */}
-                <h3 style={{ paddingTop: isMobile ? "250px" : "280px", paddingLeft: "90px", color: '#fff' }}>Your cyber security journey</h3>
+                <h3 style={{ paddingTop: isMobile ? "250px" : "700px", paddingLeft: "90px", color: '#fff' }}>Your cyber security journey</h3>
               </Col>
             </Row>
           </Container>
