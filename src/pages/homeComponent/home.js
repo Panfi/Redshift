@@ -143,7 +143,7 @@ class Home extends Component {
               animationData: animations.Website_Header,
             }}
             style={{
-              paddingTop: 80, height: null, width: isMobile ? '150%' : '110%',
+              paddingTop: 0, height: null, width: isMobile ? '150%' : '110%',
               marginLeft: isMobile ? null : -30
             }}
             isStopped={this.state.isStopped}
