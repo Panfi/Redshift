@@ -199,8 +199,8 @@ class Home extends Component {
           <div className="approach">
             <h3 className="text-center" style={{ paddingTop: isMobile ? 0 : "70px", marginBottom: '70px' }}>Our three-step cyber approach</h3>
             <BootstrapCarousel></BootstrapCarousel>
-            
-            <CardDeck>
+
+            {/*<CardDeck>*/}
               {/* <h1>01</h1>
                 <h2>penetration testing</h2>
                 <p>
@@ -209,7 +209,7 @@ class Home extends Component {
                   to show you the true business context of vulnerabilities.
                 </p> */}
 
-              <Card style={{ marginTop: "70px;" }}>
+              {/*<Card style={{ marginTop: "70px;" }}>
                 <CardImg top width="100%" src={Red} alt="" />
                 <CardBody>
                   <CardTitle style={{ textTransform: "uppercase", fontWeight: "bold" }}>penetration testing</CardTitle>
@@ -218,7 +218,7 @@ class Home extends Component {
                     to show you the true business context of vulnerabilities.</CardText>
                   <Button type="btn-primary" title="Learn More" to={"/pentest"} />
                 </CardBody>
-              </Card>
+              </Card>*/}
 
 
               {/* <h1>02</h1>
@@ -229,7 +229,7 @@ class Home extends Component {
                   mauris pulvinar velit, sed fermentum lorem nisl a ligula.
               </p> */}
 
-              <Card style={{ marginTop: "70px;" }}>
+              {/*<Card style={{ marginTop: "70px;" }}>
                 <CardImg top width="100%" src={Black} alt="" />
                 <CardBody>
                   <CardTitle style={{ textTransform: "uppercase", fontWeight: "bold" }}>red team</CardTitle>
@@ -237,7 +237,7 @@ class Home extends Component {
                           mauris pulvinar velit, sed fermentum lorem nisl a ligula.</CardText>
                   <Button type="btn-primary" title="Learn More" to={"/redteam"} />
                 </CardBody>
-              </Card>
+            </Card>*/}
 
 
               {/* <h1>03</h1>
@@ -246,16 +246,16 @@ class Home extends Component {
                   Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.
                 </p> */}
 
-              <Card style={{ marginTop: "70px;" }}>
+              {/*<Card style={{ marginTop: "70px;" }}>
                 <CardImg top width="100%" src={Grey} alt="" />
                 <CardBody>
                   <CardTitle style={{ textTransform: "uppercase", fontWeight: "bold" }}>Cyber defense consulting</CardTitle>
                   <CardText>Expert security advice to help you defend your organization against modern attackers and achieve resilience to cyber attacks.</CardText>
                   <Button type="btn-primary" title="Learn More" to={"/cyber"} />
                 </CardBody>
-              </Card>
+              </Card>*/}
 
-            </CardDeck>
+            {/*</CardDeck>*/}
           </div>
         </Container>
         <Container fluid>
