@@ -135,8 +135,8 @@ class Home extends Component {
 
     return (
       <div>
-        <div style={{ background: '#000000' }}>
-        <Container className="home" style={{ backgroundColor: '#000000', minHeight: '100vh', overflowX: 'hidden', width: '100%' }}>
+        <div style={{ background: '#000000', maxHeight: '1243px' }}>
+        <Container className="home" style={{ backgroundColor: '#000000', minHeight: '64vh', overflowX: 'hidden', width: '100%' }}>
           <Lottie
             options={{
               ...defaultOptions,
