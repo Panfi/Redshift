@@ -19,7 +19,8 @@
   font-weight: 900;
   margin-top: 70px;
 }
-
+.banner-t1{position: absolute; top: -1085px;}
+.banner-t2{position: absolute; top: -208px;}
 .home a.btn-default {
   background: transparent !important;
   color: #fff !important;
@@ -40,7 +41,7 @@
   font-weight: bold;
 }
 .home-text-block {
-  position: absolute;
+  /*position: absolute;*/
   top: 0px;
   right: 200px;
   /* width: 400px; */

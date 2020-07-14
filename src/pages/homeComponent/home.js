@@ -149,12 +149,16 @@ class Home extends Component {
             }}
             isStopped={this.state.isStopped}
             isPaused={false} />
-          <Container className="home-text-block" style={{ paddingTop: isMobile ? null : "200px", marginTop: isMobile ? -100 : null }}>
+          <div className="home-text-block" style={{ paddingTop: isMobile ? null : "0px", marginTop: isMobile ? -100 : null }}>
             <Row>
-              <Col md="7"></Col>
+              <Col md="7">
+                <div class="banner-t2">
+                  <h3 style={{ paddingTop: isMobile ? "250px" : "0px", paddingLeft: "0px", color: '#fff', fontWeight: "normal", fontSize: "32px" }}>Your cyber security journey</h3>
+                </div>
+              </Col>
               <Col md="5">
-                <div className="ml-5">
-                  <h1 style={{ textTransform: "uppercase", marginTop: isMobile ? "50px" : "10px", color: '#fff' }}>
+                <div className="ml-5 banner-t1">
+                  <h1 style={{ textTransform: "uppercase", marginTop: isMobile ? "50px" : "100px", color: '#fff' }}>
                     Build resilience <br />
                     against modern <br />
                     cyber attacks
@@ -178,10 +182,10 @@ class Home extends Component {
                 <br /> attack path mapping to show you the true business context
                   of vulnerabilities.
               </p> */}
-                <h3 style={{ paddingTop: isMobile ? "250px" : "635px", paddingLeft: "90px", color: '#fff', fontWeight: "normal", fontSize: "32px" }}>Your cyber security journey</h3>
+                
               </Col>
             </Row>
-          </Container>
+          </div>
         </Container>
         </div>
         {/* <Container fluid className="home"> */}
