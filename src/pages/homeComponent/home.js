@@ -136,7 +136,7 @@ class Home extends Component {
     return (
       <div>
         <div style={{ background: '#000000', maxHeight: '1243px' }}>
-        <Container className="home" style={{ minHeight: '64vh', overflowX: 'hidden', width: '100%' }}>
+        <Container className="home" style={{ minHeight: '64vh', width: '100%' }}>
           <Lottie
             options={{
               ...defaultOptions,
