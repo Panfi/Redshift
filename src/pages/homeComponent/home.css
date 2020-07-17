@@ -471,9 +471,8 @@
     top: -115px;
   }
 
-  .banner-t2 {
-    display: none;
-    
-  }
+  .banner-t2 { display: none; }
+
+  .mt-5, .my-5 { margin-top: 1rem!important; }
 
 }

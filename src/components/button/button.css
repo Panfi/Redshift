@@ -40,6 +40,6 @@
 }
 
 @media screen and (max-width: 720px) {
-  .mybutton { margin: -12px;}
+  .mybutton { margin: -12px 0px 30px 0px; }
 
 }
