@@ -18,9 +18,17 @@
 .slider-btn-cell{
   display: block;
   height: 60px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .slider-btn{
   float: right;
+}
+
+@media screen and (max-width: 720px) {
+
+  .slider-btn-cell {
+    margin-top: 25px;
+  }
+
 }
