@@ -19,6 +19,8 @@
   font-weight: 900;
   margin-top: 70px;
 }
+
+.carousel-caption{ position: static!important;}
 .banner-t1{position: absolute; top: -1085px;}
 .banner-t2{position: absolute; top: -305px;}
 .home a.btn-default {
