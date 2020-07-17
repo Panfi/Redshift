@@ -431,7 +431,7 @@
     display: none !important;
   }
   .home {
-    background: #000 url("../../assets/images/Group1028@2x.png") no-repeat center center;
+    /*background: #000 url("../../assets/images/Group1028@2x.png") no-repeat center center;*/
     background-size: contain;
     background-position-y: 80%;
 
