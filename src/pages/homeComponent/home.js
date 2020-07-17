@@ -340,7 +340,7 @@ class Home extends Component {
 
                 </Row>
                 <div
-                  style={{ paddingTop: "100px", paddingBottom: "0px" }}
+                  style={{ paddingTop: "0px", paddingBottom: "0px" }}
                 ></div>
               </Container>
             </div>
