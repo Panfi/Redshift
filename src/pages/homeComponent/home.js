@@ -279,8 +279,8 @@ class Home extends Component {
                   className="text-center"
                   style={{
                     color: "white",
-                    paddingTop: "100px",
-                    paddingBottom: "100px"
+                    paddingTop: "0px",
+                    paddingBottom: "0px"
                   }}
                 >
                   <h3
