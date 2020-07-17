@@ -464,6 +464,7 @@
 
   .carousel-indicators {
     top: 565px!important;
+    display: none;
   }
 
   .banner-t1 {
