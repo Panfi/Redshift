@@ -16,7 +16,7 @@ export class BootstrapCarousel extends Component {
                     interval={5000}
                     controls={false}
                     indicators={true}>
-                        <Carousel.Item style={{'height':"460px"}} >
+                        <Carousel.Item style={{'height':"100%"}} >
                             <img style={{'height':"auto"}} className="d-block w-100" src={sliderHeader} />
                             <Carousel.Caption>
                                 <span class="c-text-line"></span>
@@ -34,7 +34,7 @@ export class BootstrapCarousel extends Component {
                             </Carousel.Caption>
                         </Carousel.Item  >
 
-                        <Carousel.Item style={{'height':"460px"}} >
+                        <Carousel.Item style={{'height':"100%"}} >
                             <img style={{'height':"auto"}} className="d-block w-100" src={sliderHeader} />
                             <Carousel.Caption>
                                 <span class="c-text-line"></span>
@@ -52,7 +52,7 @@ export class BootstrapCarousel extends Component {
                             </Carousel.Caption>
                         </Carousel.Item  >
 
-                        <Carousel.Item style={{'height':"460px"}} >
+                        <Carousel.Item style={{'height':"100%"}} >
                             <img style={{'height':"auto"}} className="d-block w-100" src={sliderHeader} />
                             <Carousel.Caption>
                                 <span class="c-text-line"></span>
