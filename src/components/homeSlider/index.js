@@ -17,7 +17,7 @@ export class BootstrapCarousel extends Component {
                     controls={false}
                     indicators={true}>
                         <Carousel.Item style={{'height':"460px"}} >
-                            <img style={{'height':"40%"}} className="d-block w-100" src={sliderHeader} />
+                            <img style={{'height':"auto"}} className="d-block w-100" src={sliderHeader} />
                             <Carousel.Caption>
                                 <span class="c-text-line"></span>
                                 <p class="c-text">
