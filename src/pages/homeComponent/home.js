@@ -203,7 +203,7 @@ class Home extends Component {
         {/* </Container> */}
         <Container className="mt-5">
           <div className="approach">
-            <h3 className="text-center" style={{ paddingTop: isMobile ? 0 : "10px", marginBottom: '70px' }}>Our three-step cyber approach.</h3>
+            <h3 className="text-center" style={{ paddingTop: isMobile ? 0 : "10px", marginBottom: '70px' }}>Our three-step cyber approach</h3>
             <BootstrapCarousel></BootstrapCarousel>
 
             {/*<CardDeck>*/}
