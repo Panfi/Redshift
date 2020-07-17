@@ -319,7 +319,7 @@
   background: url("../../assets/images/canyon.png") no-repeat;
   background-size: cover;
   min-height: 220px;
-  margin: 100px 0px 0px;
+  margin: 50px 0px 0px;
   width: 100% !important;
 }
 
@@ -458,5 +458,8 @@
     display: none !important;
   }
 
+  .canyon {
+    margin: 25px 0 0;
+  }
 
 }
