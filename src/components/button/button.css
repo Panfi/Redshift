@@ -38,3 +38,8 @@
   color: #fff !important;
   border: solid 2px #ed1d23 !important;
 }
+
+@media screen and (max-width: 720px) {
+  .mybutton { margin: -12px;}
+
+}
