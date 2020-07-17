@@ -466,4 +466,14 @@
     top: 565px!important;
   }
 
+  .banner-t1 {
+    position: absolute;
+    top: -22px;
+  }
+
+  .banner-t2 {
+    display: none;
+    
+}
+
 }
