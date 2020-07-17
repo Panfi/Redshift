@@ -475,4 +475,9 @@
 
   .mt-5, .my-5 { margin-top: 1rem!important; }
 
+  .bg-service {
+    background: #000;
+    background-size: auto;
+}
+
 }
