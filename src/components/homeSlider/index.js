@@ -12,7 +12,7 @@ export class BootstrapCarousel extends Component {
             <div>
                
                 <div className='container-fluid' >
-                    <Carousel autoPlay={true}
+                    <Carousel autoPlay={false}
                     interval={5000}
                     controls={false}
                     indicators={true}>
