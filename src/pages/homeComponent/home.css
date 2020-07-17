@@ -459,7 +459,15 @@
   }
 
   .canyon {
-    margin: 25px 0 0;
+    margin: 40px 0 0;
   }
+
+  .carousel-indicators {
+    top: 565px!important;
+  }
+
+  .slider-btn-cell {
+    margin-top: 25px;
+}
 
 }
