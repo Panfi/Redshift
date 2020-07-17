@@ -21,6 +21,7 @@
 }
 
 .carousel-caption{ position: static!important;}
+.carousel-indicators { top: 468px!important }
 .banner-t1{position: absolute; top: -1085px;}
 .banner-t2{position: absolute; top: -305px;}
 .home a.btn-default {
