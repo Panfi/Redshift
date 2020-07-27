@@ -469,7 +469,8 @@
 
   .banner-t1 {
     position: absolute;
-    top: -115px;
+    top: -390px;
+    left: 158px;
   }
 
   .banner-t2 { display: none; }

@@ -158,7 +158,7 @@ class Home extends Component {
               </Col>
               <Col md="5">
                 <div className="ml-5 banner-t1">
-                  <h1 style={{ textTransform: "uppercase", marginTop: isMobile ? "50px" : "100px", color: '#fff' }}>
+                  <h1 style={{ textTransform: "uppercase", fontSize: isMobile ? "16px" : "", marginTop: isMobile ? "50px" : "100px", color: '#fff' }}>
                     Build resilience <br />
                     against modern <br />
                     cyber attacks
