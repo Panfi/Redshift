@@ -21,7 +21,9 @@
 }
 
 .carousel-caption{ position: static!important;}
-.carousel-indicators { top: 468px!important }
+.cyber-carousel ol.carousel-indicators {
+  bottom: -30px !important;
+}
 .banner-t1{position: absolute; top: -1085px;}
 .banner-t2{position: absolute; top: -305px;}
 .home a.btn-default {
@@ -460,6 +462,10 @@
 
   .canyon {
     margin: 40px 0 0;
+  }
+  .cyber-carousel ol.carousel-indicators{
+    display: none !important;;
+    visibility: hidden !important;;
   }
 
   .carousel-indicators {

@@ -3,12 +3,9 @@ import React, { Component } from 'react'
 import './footer.css';
 import { Container, Row, Col, Form, FormGroup, Input } from 'reactstrap';
 import Button from '../button';
-import { withApollo } from 'react-apollo';
-import { mutations } from 'graphql-methods';
 
 
 const emailregex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-const { subscribe } = mutations
 class Footer extends Component {
 
   state = {
@@ -25,17 +22,9 @@ class Footer extends Component {
   onSubmit = async () => {
     try {
       if (emailregex.test(this.state.subscriber)) {
-        await this.props.client.mutate({
-          mutation: subscribe,
-          variables: {
-            input: {
-              email: this.state.subscriber
-            }
-          }
-        });
-        this.setState({ subscriber: "" })
+        return this.setState({ subscriber: "" })
       }
-      return alert("Invalid email: " + emailregex.test(this.state.subscriber))
+      return alert("Invalid email")
     } catch (error) {
     }
   }
@@ -99,4 +88,4 @@ class Footer extends Component {
   }
 }
 
-export default withApollo(Footer);
+export default Footer;
