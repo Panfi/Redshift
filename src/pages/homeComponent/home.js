@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
 import "./home.css";
-import { Container, Col, Row, Card, CardImg, CardText, CardBody, CardTitle, CardDeck } from "reactstrap";
+import { Container, Col, Row } from "reactstrap";
 import Button from '../../components/button';
 import BootstrapCarousel from '../../components/homeSlider';
 import { scroller } from 'react-scroll';
 import { isMobile } from 'react-device-detect';
 import Carousel from '../testimonials';
-import Red from '../../assets/images/red.png';
-import Grey from '../../assets/images/grey.png';
-import Black from '../../assets/images/black.png';
 import Lottie from 'react-lottie';
 import { animations } from '../../assets';
 import ServiceCard from './ServiceCard/index';
@@ -152,7 +149,7 @@ class Home extends Component {
           <div className="home-text-block" style={{ paddingTop: isMobile ? null : "0px", marginTop: isMobile ? -100 : null }}>
             <Row>
               <Col md="7">
-                <div class="banner-t2">
+                <div className="banner-t2">
                   <h3 style={{ paddingTop: isMobile ? "250px" : "0px", paddingLeft: "0px", color: '#fff', fontWeight: "normal", fontSize: "32px" }}>Your cyber security journey</h3>
                 </div>
               </Col>

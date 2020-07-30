@@ -128,7 +128,7 @@ export default class BlogPage extends Component {
             </Container>
             {/* <div>
               <Row>
-                <div class="canyon2"></div>
+                <div className="canyon2"></div>
               </Row>
             </div> */}
           </div>
