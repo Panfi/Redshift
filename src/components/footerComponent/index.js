@@ -24,7 +24,7 @@ class Footer extends Component {
       if (emailregex.test(this.state.subscriber)) {
         return this.setState({ subscriber: "" })
       }
-      return alert("Invalid email: " + emailregex.test(this.state.subscriber))
+      return alert("Invalid email")
     } catch (error) {
     }
   }
