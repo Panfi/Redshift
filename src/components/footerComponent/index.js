@@ -25,15 +25,7 @@ class Footer extends Component {
   onSubmit = async () => {
     try {
       if (emailregex.test(this.state.subscriber)) {
-        await this.props.client.mutate({
-          mutation: subscribe,
-          variables: {
-            input: {
-              email: this.state.subscriber
-            }
-          }
-        });
-        this.setState({ subscriber: "" })
+        return this.setState({ subscriber: "" })
       }
       return alert("Invalid email: " + emailregex.test(this.state.subscriber))
     } catch (error) {
