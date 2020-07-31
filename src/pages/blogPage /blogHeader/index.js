@@ -3,8 +3,16 @@ import { Container, Row,Col } from 'reactstrap';
 import { isMobile } from 'react-device-detect';
 import Button from '../../../components/button';
 import bg from "../../../assets/images/Redshift_Web_Header-03.png";
+import { withRouter } from 'react-router-dom';
 
-export default function BlogHeader() {
+const BlogHeader = ({history}) =>{
+
+    const onLearnMore = () => {
+       history.push({
+            pathname: '/contact',
+            state: { goto: "contact-form" }
+          })
+    }
     return (
         <div className="bg-blog"
             style={{
@@ -45,7 +53,7 @@ export default function BlogHeader() {
                                 them to remediation.
                       </p>
                       <br />
-                        <Button type="btn-default" title="Learn More" />
+                        <Button type="btn-default" title="Learn More" onButton={onLearnMore}/>
                         </div>
                     </Col>
                 </Row>
@@ -53,3 +61,6 @@ export default function BlogHeader() {
         </div>
     )
 }
+
+
+export default withRouter(BlogHeader)
