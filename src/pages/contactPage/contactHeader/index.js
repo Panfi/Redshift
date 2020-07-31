@@ -4,7 +4,7 @@ import { isMobile } from 'react-device-detect';
 import Button from '../../../components/button';
 import bg from "../../../assets/images/Redshift_Web_Header-03.png";
 
-export default function contactHeader() {
+export default function contactHeader({onButton}) {
     return (
         <div className="bg-contact-header"
             style={{
@@ -45,7 +45,7 @@ export default function contactHeader() {
                                 them to remediation.
                       </p>
                       <br />
-                        <Button type="btn-default" title="Learn More" />
+                        <Button type="btn-default" title="Learn More" onButton={onButton}/>
                         </div>
                     </Col>
                 </Row>

@@ -24,11 +24,20 @@ export default class ContactPage extends Component {
     }
     return  animateScroll.scrollToTop();
   }
+  onLearnMore = () => {
+    scroller.scrollTo('contact-form', {
+      duration: 500,
+      hashSpy: true,
+      delay: 100,
+      smooth: true,
+      offset:-100
+    });
+  }
 
     render() {
         return (
           <div className="bg-contact">
-            <ContactHeader />
+            <ContactHeader onButton={this.onLearnMore}/>
             <Container className="mt-5 mb-5" style={{paddingTop:"70px"}}>
               <Row>
                 <Col md="7" xs="12">

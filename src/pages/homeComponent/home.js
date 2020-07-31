@@ -108,18 +108,23 @@ class Home extends Component {
 
   onRefLottie = (ref) => {
     this._lottieHeartRef = ref;
-    console.log(ref)
   }
 
   onMouseEnter = () => {
     this._lottieHeartRef && this._lottieHeartRef.play();
-    console.log("animate", this._lottieHeartRef);
   };
 
   onMouseLeave = () => {
     this._lottieHeartRef && this._lottieHeartRef.pause();
-    console.log("stop", this._lottieHeartRef);
   };
+
+
+  onLearnMore = () => {
+    this.props.history.push({
+        pathname: '/contact',
+        state: { goto: "contact-form" }
+      })
+}
 
   render() {
     const defaultOptions = {
@@ -168,7 +173,7 @@ class Home extends Component {
                     them to remediation.
                 </p> */}
                   <br />
-                  <Button type="btn-default" title="Learn More" to={"/contact"} />
+                  <Button type="btn-default" title="Learn More" onButton={this.onLearnMore} />
                 </div>
               </Col>
               <Col md="12">
